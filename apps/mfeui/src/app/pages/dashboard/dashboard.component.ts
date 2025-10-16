@@ -19,7 +19,7 @@ export class DashboardComponent {
       icon: 'bi-shop',
       color: 'primary',
       url: '/products',
-      status: 'planned', // 'active', 'planned', 'development'
+      status: 'active', // 'active', 'planned', 'development'
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
       port: 4201,
     },
@@ -30,7 +30,7 @@ export class DashboardComponent {
       icon: 'bi-cart-fill',
       color: 'success',
       url: '/cart',
-      status: 'planned',
+      status: 'active',
       remoteEntry: 'http://localhost:4202/remoteEntry.js',
       port: 4202,
     },

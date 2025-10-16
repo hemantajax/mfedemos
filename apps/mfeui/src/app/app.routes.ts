@@ -3,6 +3,14 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 export const appRoutes: Route[] = [
   {
+    path: 'cart',
+    loadChildren: () => import('cart/Routes').then((m) => m!.remoteRoutes),
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('products/Routes').then((m) => m!.remoteRoutes),
+  },
+  {
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full',
