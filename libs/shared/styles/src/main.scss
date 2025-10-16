@@ -14,60 +14,60 @@
 // 1. ABSTRACTS - Variables, Functions, Mixins
 // ============================================================================
 // Keep these active - useful for customization and theming
-@import 'abstracts/variables';
-@import 'abstracts/functions';
-@import 'abstracts/mixins';
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
 
 // ============================================================================
 // 2. VENDORS - Third-party styles (Bootstrap 5)
 // ============================================================================
 // Bootstrap 5 provides comprehensive styling out of the box
-@import 'vendors/bootstrap';
+@use 'vendors/bootstrap' as *;
 
 // ============================================================================
 // 3. BASE - Reset, Typography, Base Styles
 // ============================================================================
 // Bootstrap already handles most base styles
 // Uncomment these if you need additional customizations
-// @import 'base/reset';
-// @import 'base/typography';
-// @import 'base/base';
+// @use 'base/reset' as *;
+// @use 'base/typography' as *;
+// @use 'base/base' as *;
 
 // ============================================================================
 // 4. LAYOUTS - Grid System, Layout Components
 // ============================================================================
 // Bootstrap has excellent grid system and layout utilities
 // Uncomment specific layouts as needed
-// @import 'layouts/grid';
-// @import 'layouts/header';
-// @import 'layouts/footer';
-// @import 'layouts/sidebar';
+// @use 'layouts/grid' as *;
+// @use 'layouts/header' as *;
+// @use 'layouts/footer' as *;
+// @use 'layouts/sidebar' as *;
 
 // ============================================================================
 // 5. COMPONENTS - Reusable UI Components
 // ============================================================================
 // Bootstrap provides most common components
 // Uncomment specific components if you need custom styling beyond Bootstrap
-// @import 'components/buttons';
-// @import 'components/cards';
-// @import 'components/forms';
-// @import 'components/modals';
-// @import 'components/navigation';
+// @use 'components/buttons' as *;
+// @use 'components/cards' as *;
+// @use 'components/forms' as *;
+// @use 'components/modals' as *;
+// @use 'components/navigation' as *;
 
 // ============================================================================
 // 6. THEMES - Theme Configurations
 // ============================================================================
 // Uncomment if you want light/dark theme support
-// @import 'themes/default';
+// @use 'themes/default' as *;
 
 // ============================================================================
 // 7. UTILITIES - Helper Classes
 // ============================================================================
 // Bootstrap has comprehensive utility classes
 // Uncomment specific utilities if you need additional helpers
-// @import 'utilities/spacing';
-// @import 'utilities/text';
-// @import 'utilities/display';
+// @use 'utilities/spacing' as *;
+// @use 'utilities/text' as *;
+// @use 'utilities/display' as *;
 
 // ============================================================================
 // 8. YOUR CUSTOM STYLES
