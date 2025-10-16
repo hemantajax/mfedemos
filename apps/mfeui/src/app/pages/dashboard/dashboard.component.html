@@ -2,126 +2,201 @@
   <!-- Page Header -->
   <div class="row mb-4">
     <div class="col-12">
-      <h1 class="display-5 fw-bold text-dark mb-2">Dashboard</h1>
-      <p class="text-muted">Welcome back! Here's what's happening today.</p>
+      <h1 class="display-5 fw-bold text-dark mb-2">
+        <i class="bi bi-grid-3x3-gap-fill me-3 text-primary"></i>
+        Micro Frontend Hub
+      </h1>
+      <p class="text-muted">
+        Manage and access your remote micro frontend applications
+      </p>
     </div>
   </div>
 
-  <!-- Stats Cards -->
-  <div class="row g-4 mb-4">
-    <div class="col-12 col-sm-6 col-lg-3" *ngFor="let stat of stats">
-      <div class="card border-0 shadow-sm h-100 stat-card">
-        <div class="card-body">
-          <div class="d-flex justify-content-between align-items-start">
-            <div>
-              <p class="text-muted mb-2 small">{{ stat.title }}</p>
-              <h3 class="fw-bold mb-0">{{ stat.value }}</h3>
-              <small class="text-success">
-                <i class="bi bi-arrow-up"></i> {{ stat.change }}
-              </small>
-            </div>
+  <!-- MFE Cards Grid -->
+  <div class="row g-4">
+    <div
+      class="col-12 col-md-6 col-lg-4 col-xl-3"
+      *ngFor="let mfe of remoteMFEs"
+    >
+      <div class="card border-0 shadow-sm h-100 mfe-card">
+        <div class="card-body d-flex flex-column">
+          <!-- Icon and Status -->
+          <div class="d-flex justify-content-between align-items-start mb-3">
             <div
-              class="stat-icon bg-{{ stat.color }} bg-opacity-10 rounded-3 p-3"
+              class="mfe-icon bg-{{ mfe.color }} bg-opacity-10 rounded-3 p-3"
             >
-              <i class="bi {{ stat.icon }} text-{{ stat.color }} fs-3"></i>
+              <i class="bi {{ mfe.icon }} text-{{ mfe.color }} fs-2"></i>
             </div>
+            <span
+              class="badge bg-{{
+                getStatusBadgeClass(mfe.status)
+              }} rounded-pill"
+            >
+              <i class="bi {{ getStatusIcon(mfe.status) }} me-1"></i>
+              {{ mfe.status }}
+            </span>
+          </div>
+
+          <!-- MFE Info -->
+          <h5 class="card-title fw-bold mb-2">{{ mfe.name }}</h5>
+          <p class="card-text text-muted small mb-3 flex-grow-1">
+            {{ mfe.description }}
+          </p>
+
+          <!-- MFE Details -->
+          <div class="mb-3">
+            <div class="d-flex align-items-center text-muted small mb-2">
+              <i class="bi bi-link-45deg me-2"></i>
+              <code class="text-truncate flex-grow-1">{{ mfe.url }}</code>
+            </div>
+            <div class="d-flex align-items-center text-muted small mb-2">
+              <i class="bi bi-hdd-network me-2"></i>
+              <span class="badge bg-light text-dark">Port: {{ mfe.port }}</span>
+            </div>
+            <div class="d-flex align-items-start text-muted small">
+              <i class="bi bi-plugin me-2 mt-1"></i>
+              <code class="text-truncate flex-grow-1 entry-url">{{
+                mfe.remoteEntry
+              }}</code>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="d-grid gap-2">
+            <a
+              [routerLink]="mfe.url"
+              class="btn btn-{{ mfe.color }} btn-sm"
+              [class.disabled]="mfe.status === 'planned'"
+            >
+              <i class="bi bi-box-arrow-up-right me-2"></i>
+              {{ mfe.status === 'active' ? 'Launch App' : 'Coming Soon' }}
+            </a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row g-4">
-    <!-- Recent Activities -->
-    <div class="col-12 col-lg-8">
-      <div class="card border-0 shadow-sm h-100">
-        <div class="card-header bg-white border-0 pt-4 pb-3">
-          <h5 class="fw-bold mb-0">
-            <i class="bi bi-clock-history me-2 text-primary"></i>
-            Recent Activities
-          </h5>
-        </div>
-        <div class="card-body">
-          <div class="list-group list-group-flush">
-            <div
-              class="list-group-item border-0 px-0 py-3 activity-item"
-              *ngFor="let activity of recentActivities"
-            >
-              <div class="d-flex align-items-center">
-                <div
-                  class="activity-icon bg-primary bg-opacity-10 rounded-circle p-2 me-3"
-                >
-                  <i class="bi {{ activity.icon }} text-primary"></i>
+  <!-- Information Footer -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="alert alert-info border-0 shadow-sm" role="alert">
+        <div class="d-flex align-items-start">
+          <i class="bi bi-info-circle-fill fs-4 me-3 mt-1"></i>
+          <div class="flex-grow-1">
+            <h5 class="alert-heading fw-bold mb-3">
+              About Micro Frontends Architecture
+            </h5>
+            <p class="mb-3">
+              This dashboard serves as the <strong>host application</strong> for
+              managing multiple independent micro frontend applications. Each
+              MFE can be developed, tested, and deployed independently while
+              seamlessly integrating into this unified shell.
+            </p>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-puzzle-fill text-primary me-2 fs-5"></i>
+                  <div>
+                    <strong class="d-block mb-1"
+                      >Independent Development</strong
+                    >
+                    <small
+                      >Each MFE is a separate Nx project with its own
+                      dependencies and build process.</small
+                    >
+                  </div>
                 </div>
-                <div class="flex-grow-1">
-                  <h6 class="mb-1">{{ activity.user }}</h6>
-                  <p class="mb-0 text-muted small">{{ activity.action }}</p>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                  <i
+                    class="bi bi-rocket-takeoff-fill text-success me-2 fs-5"
+                  ></i>
+                  <div>
+                    <strong class="d-block mb-1">Autonomous Deployment</strong>
+                    <small
+                      >Deploy MFEs independently without affecting other
+                      modules.</small
+                    >
+                  </div>
                 </div>
-                <small class="text-muted">{{ activity.time }}</small>
+              </div>
+              <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-people-fill text-warning me-2 fs-5"></i>
+                  <div>
+                    <strong class="d-block mb-1">Team Autonomy</strong>
+                    <small
+                      >Different teams can own and maintain different
+                      MFEs.</small
+                    >
+                  </div>
+                </div>
               </div>
             </div>
+            <hr class="my-3" />
+            <p class="mb-0 small">
+              <strong class="me-2">Status Legend:</strong>
+              <span class="badge bg-success ms-1"
+                ><i class="bi bi-check-circle-fill me-1"></i>Active</span
+              >
+              <span class="badge bg-warning ms-1"
+                ><i class="bi bi-hourglass-split me-1"></i>Development</span
+              >
+              <span class="badge bg-secondary ms-1"
+                ><i class="bi bi-clock-fill me-1"></i>Planned</span
+              >
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Quick Links & Info -->
-    <div class="col-12 col-lg-4">
-      <!-- Quick Links Card -->
-      <div class="card border-0 shadow-sm mb-4">
-        <div class="card-header bg-white border-0 pt-4 pb-3">
-          <h5 class="fw-bold mb-0">
-            <i class="bi bi-lightning-fill me-2 text-warning"></i>
-            Quick Actions
-          </h5>
-        </div>
-        <div class="card-body">
-          <div class="d-grid gap-2">
-            <button
-              class="btn btn-outline-{{
-                link.color
-              }} d-flex align-items-center justify-content-start"
-              *ngFor="let link of quickLinks"
-            >
-              <i class="bi {{ link.icon }} me-2 fs-5"></i>
-              {{ link.title }}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats Summary Card -->
-      <div class="card border-0 shadow-sm bg-gradient-primary text-white">
+  <!-- Quick Start Guide -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card border-0 shadow-sm">
         <div class="card-body">
           <h5 class="fw-bold mb-3">
-            <i class="bi bi-trophy-fill me-2"></i>
-            Performance
+            <i class="bi bi-lightbulb-fill text-warning me-2"></i>
+            Quick Start Guide
           </h5>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between mb-2">
-              <small>Sales Target</small>
-              <small class="fw-bold">78%</small>
+          <div class="row">
+            <div class="col-md-6">
+              <h6 class="fw-bold text-primary mb-2">Creating a New MFE:</h6>
+              <ol class="small">
+                <li class="mb-2">
+                  Generate a new Angular app:
+                  <code class="d-block mt-1 p-2 bg-light rounded"
+                    >nx g @nx/angular:app my-mfe</code
+                  >
+                </li>
+                <li class="mb-2">
+                  Configure Module Federation in the new app's webpack config
+                </li>
+                <li class="mb-2">Update the routes in this host application</li>
+                <li>Start the MFE on its designated port</li>
+              </ol>
             </div>
-            <div class="progress bg-white bg-opacity-25" style="height: 8px">
-              <div class="progress-bar bg-warning" style="width: 78%"></div>
-            </div>
-          </div>
-          <div class="mb-3">
-            <div class="d-flex justify-content-between mb-2">
-              <small>Customer Satisfaction</small>
-              <small class="fw-bold">92%</small>
-            </div>
-            <div class="progress bg-white bg-opacity-25" style="height: 8px">
-              <div class="progress-bar bg-success" style="width: 92%"></div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex justify-content-between mb-2">
-              <small>Task Completion</small>
-              <small class="fw-bold">65%</small>
-            </div>
-            <div class="progress bg-white bg-opacity-25" style="height: 8px">
-              <div class="progress-bar bg-info" style="width: 65%"></div>
+            <div class="col-md-6">
+              <h6 class="fw-bold text-success mb-2">Available Ports:</h6>
+              <div class="small">
+                <p class="mb-2">
+                  Each MFE is assigned a specific port for local development:
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-1">
+                    <span class="badge bg-secondary">4200</span> - Host
+                    Application (this app)
+                  </li>
+                  <li class="mb-1">
+                    <span class="badge bg-primary">4201-4208</span> - Remote MFE
+                    Applications
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

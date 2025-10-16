@@ -1,86 +1,122 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })
 export class DashboardComponent {
-  stats = [
+  // Remote MFE configurations
+  remoteMFEs = [
     {
-      title: 'Total Users',
-      value: '12,543',
-      icon: 'bi-people-fill',
+      id: 1,
+      name: 'Product Catalog',
+      description: 'Browse and search products with advanced filtering',
+      icon: 'bi-shop',
       color: 'primary',
-      change: '+12.5%',
+      url: '/products',
+      status: 'planned', // 'active', 'planned', 'development'
+      remoteEntry: 'http://localhost:4201/remoteEntry.js',
+      port: 4201,
     },
     {
-      title: 'Revenue',
-      value: '$45,678',
-      icon: 'bi-currency-dollar',
-      color: 'success',
-      change: '+8.2%',
-    },
-    {
-      title: 'Orders',
-      value: '1,234',
+      id: 2,
+      name: 'Shopping Cart',
+      description: 'Cart and checkout management system',
       icon: 'bi-cart-fill',
-      color: 'warning',
-      change: '+5.7%',
-    },
-    {
-      title: 'Visitors',
-      value: '89,432',
-      icon: 'bi-graph-up',
-      color: 'info',
-      change: '+15.3%',
-    },
-  ];
-
-  recentActivities = [
-    {
-      user: 'John Doe',
-      action: 'Created new order',
-      time: '2 minutes ago',
-      icon: 'bi-cart-plus',
-    },
-    {
-      user: 'Jane Smith',
-      action: 'Updated profile',
-      time: '15 minutes ago',
-      icon: 'bi-person-check',
-    },
-    {
-      user: 'Mike Johnson',
-      action: 'Completed payment',
-      time: '1 hour ago',
-      icon: 'bi-check-circle',
-    },
-    {
-      user: 'Sarah Williams',
-      action: 'Left a review',
-      time: '2 hours ago',
-      icon: 'bi-star-fill',
-    },
-    {
-      user: 'Tom Brown',
-      action: 'Registered account',
-      time: '3 hours ago',
-      icon: 'bi-person-plus',
-    },
-  ];
-
-  quickLinks = [
-    { title: 'Add New User', icon: 'bi-person-plus-fill', color: 'primary' },
-    {
-      title: 'View Reports',
-      icon: 'bi-file-earmark-bar-graph',
       color: 'success',
+      url: '/cart',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4202/remoteEntry.js',
+      port: 4202,
     },
-    { title: 'Settings', icon: 'bi-gear-fill', color: 'warning' },
-    { title: 'Analytics', icon: 'bi-pie-chart-fill', color: 'info' },
+    {
+      id: 3,
+      name: 'User Profile',
+      description: 'Manage your profile and account settings',
+      icon: 'bi-person-circle',
+      color: 'info',
+      url: '/profile',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4203/remoteEntry.js',
+      port: 4203,
+    },
+    {
+      id: 4,
+      name: 'Orders Management',
+      description: 'View, track and manage your orders',
+      icon: 'bi-box-seam',
+      color: 'warning',
+      url: '/orders',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4204/remoteEntry.js',
+      port: 4204,
+    },
+    {
+      id: 5,
+      name: 'Analytics Dashboard',
+      description: 'Business insights, metrics and reports',
+      icon: 'bi-graph-up-arrow',
+      color: 'danger',
+      url: '/analytics',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4205/remoteEntry.js',
+      port: 4205,
+    },
+    {
+      id: 6,
+      name: 'Notifications',
+      description: 'Notification center and alert management',
+      icon: 'bi-bell-fill',
+      color: 'secondary',
+      url: '/notifications',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4206/remoteEntry.js',
+      port: 4206,
+    },
+    {
+      id: 7,
+      name: 'Messaging',
+      description: 'Real-time chat and messaging system',
+      icon: 'bi-chat-dots-fill',
+      color: 'primary',
+      url: '/messages',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4207/remoteEntry.js',
+      port: 4207,
+    },
+    {
+      id: 8,
+      name: 'Admin Panel',
+      description: 'Administrative tools and configuration',
+      icon: 'bi-gear-fill',
+      color: 'dark',
+      url: '/admin',
+      status: 'planned',
+      remoteEntry: 'http://localhost:4208/remoteEntry.js',
+      port: 4208,
+    },
   ];
+
+  getStatusBadgeClass(status: string): string {
+    const statusMap: { [key: string]: string } = {
+      active: 'success',
+      development: 'warning',
+      planned: 'secondary',
+    };
+    return statusMap[status] || 'secondary';
+  }
+
+  getStatusIcon(status: string): string {
+    const iconMap: { [key: string]: string } = {
+      active: 'bi-check-circle-fill',
+      development: 'bi-hourglass-split',
+      planned: 'bi-clock-fill',
+    };
+    return iconMap[status] || 'bi-clock-fill';
+  }
 }
