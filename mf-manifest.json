@@ -1,0 +1,215 @@
+{
+  "id": "mfeui",
+  "name": "mfeui",
+  "metaData": {
+    "name": "mfeui",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@nxmfe/source"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "mfeui",
+    "pluginVersion": "0.18.4",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "mfeui:@angular/common/http",
+      "name": "@angular/common/http",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "111.8f42b3d2c741bd98.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/common",
+      "name": "@angular/common",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "705.c06617aeca8e8eb5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/core/primitives/di",
+      "name": "@angular/core/primitives/di",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.0cf93698a8979800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/core/primitives/signals",
+      "name": "@angular/core/primitives/signals",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.0cf93698a8979800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/core",
+      "name": "@angular/core",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "295.baafa64d0236da18.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/forms",
+      "name": "@angular/forms",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "341.d6d5d2c63dab204c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/platform-browser",
+      "name": "@angular/platform-browser",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "567.0b05e8b85af33e5d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@angular/router",
+      "name": "@angular/router",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "189.bb86a6a91c3dce9d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@nxmfe/shared/ui-components",
+      "name": "@nxmfe/shared/ui-components",
+      "version": "0.0.1",
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.0cf93698a8979800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "federationContainerName": "http://localhost:4202/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "cart",
+      "entry": "*"
+    },
+    {
+      "federationContainerName": "http://localhost:4201/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "products",
+      "entry": "*"
+    }
+  ],
+  "exposes": []
+}

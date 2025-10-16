@@ -1,0 +1,180 @@
+{
+  "id": "products",
+  "name": "products",
+  "metaData": {
+    "name": "products",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@nxmfe/source"
+    },
+    "remoteEntry": {
+      "name": "remoteEntry.mjs",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "products",
+    "pluginVersion": "0.18.4",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "products:@angular/common/http",
+      "name": "@angular/common/http",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "111.6dcd56f3b6fbe424.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "products:@angular/common",
+      "name": "@angular/common",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "705.d2f7dca15efd5259.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "products:@angular/core/primitives/di",
+      "name": "@angular/core/primitives/di",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.41e515b14861b17f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "products:@angular/core/primitives/signals",
+      "name": "@angular/core/primitives/signals",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.41e515b14861b17f.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "products:@angular/core",
+      "name": "@angular/core",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "295.97291942ce703e07.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "products:@angular/platform-browser",
+      "name": "@angular/platform-browser",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "567.35262fc2beba30b8.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "products:@angular/router",
+      "name": "@angular/router",
+      "version": "20.3.5",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "451.b20f78b0ddeb67b5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [],
+  "exposes": [
+    {
+      "id": "products:Routes",
+      "name": "Routes",
+      "assets": {
+        "js": {
+          "sync": [],
+          "async": []
+        },
+        "css": {
+          "sync": [],
+          "async": []
+        }
+      },
+      "path": "./Routes"
+    }
+  ]
+}

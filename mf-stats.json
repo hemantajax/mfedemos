@@ -1,0 +1,258 @@
+{
+  "id": "mfeui",
+  "name": "mfeui",
+  "metaData": {
+    "name": "mfeui",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "0.0.0",
+      "buildName": "@nxmfe/source"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "module"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "mfeui",
+    "pluginVersion": "0.18.4",
+    "prefetchInterface": false,
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common/http",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/common/http",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "111.8f42b3d2c741bd98.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/common",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/common",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "705.c06617aeca8e8eb5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/di",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/core/primitives/di",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.0cf93698a8979800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core/primitives/signals",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/core/primitives/signals",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.0cf93698a8979800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/core",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/core",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "295.baafa64d0236da18.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/forms",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/forms",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "341.d6d5d2c63dab204c.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/platform-browser",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/platform-browser",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "567.0b05e8b85af33e5d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "mfeui:@angular/router",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "189.bb86a6a91c3dce9d.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@nxmfe/shared/ui-components",
+      "version": "0.0.1",
+      "id": "mfeui:@nxmfe/shared/ui-components",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.0cf93698a8979800.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    }
+  ],
+  "remotes": [
+    {
+      "alias": "cart",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "http://localhost:4202/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) cart/Routes@* (strict) (fallback: apps/cart/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
+    {
+      "alias": "products",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "http://localhost:4201/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) products/Routes@* (strict) (fallback: apps/products/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    }
+  ],
+  "exposes": []
+}
