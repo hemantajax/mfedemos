@@ -1,0 +1,263 @@
+<div class="container py-5">
+  <!-- Page Header -->
+  <div class="row mb-5">
+    <div class="col-12 text-center">
+      <h1 class="display-4 fw-bold mb-3">Get In Touch</h1>
+      <p class="lead text-muted col-lg-8 mx-auto">
+        Have a question or want to work together? We'd love to hear from you.
+        Send us a message and we'll respond as soon as possible.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Info Cards -->
+  <div class="row g-4 mb-5">
+    <div class="col-sm-6 col-lg-3" *ngFor="let info of contactInfo">
+      <div class="card border-0 shadow-sm h-100 text-center contact-info-card">
+        <div class="card-body p-4">
+          <div
+            class="icon-wrapper bg-primary bg-opacity-10 rounded-circle mx-auto mb-3"
+          >
+            <i class="bi {{ info.icon }} text-primary fs-2"></i>
+          </div>
+          <h5 class="fw-bold mb-3">{{ info.title }}</h5>
+          <p class="text-muted small mb-1" *ngFor="let detail of info.details">
+            {{ detail }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form and Map -->
+  <div class="row g-4">
+    <!-- Contact Form -->
+    <div class="col-lg-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body p-4">
+          <h3 class="fw-bold mb-4">
+            <i class="bi bi-chat-dots-fill me-2 text-primary"></i>
+            Send us a Message
+          </h3>
+
+          <!-- Success Alert -->
+          <div
+            class="alert alert-success alert-dismissible fade show"
+            role="alert"
+            *ngIf="submitted"
+          >
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Success!</strong> Your message has been sent successfully.
+            We'll get back to you soon.
+          </div>
+
+          <form
+            #contactForm="ngForm"
+            (ngSubmit)="onSubmit()"
+            *ngIf="!submitted"
+          >
+            <!-- Name Input -->
+            <div class="mb-3">
+              <label for="name" class="form-label fw-semibold">
+                Full Name <span class="text-danger">*</span>
+              </label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="bi bi-person"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control border-start-0"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="formData.name"
+                  required
+                  placeholder="John Doe"
+                />
+              </div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">
+                Email Address <span class="text-danger">*</span>
+              </label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="bi bi-envelope"></i>
+                </span>
+                <input
+                  type="email"
+                  class="form-control border-start-0"
+                  id="email"
+                  name="email"
+                  [(ngModel)]="formData.email"
+                  required
+                  placeholder="john@example.com"
+                />
+              </div>
+            </div>
+
+            <!-- Subject Input -->
+            <div class="mb-3">
+              <label for="subject" class="form-label fw-semibold">
+                Subject <span class="text-danger">*</span>
+              </label>
+              <div class="input-group">
+                <span class="input-group-text bg-light border-end-0">
+                  <i class="bi bi-tag"></i>
+                </span>
+                <input
+                  type="text"
+                  class="form-control border-start-0"
+                  id="subject"
+                  name="subject"
+                  [(ngModel)]="formData.subject"
+                  required
+                  placeholder="How can we help?"
+                />
+              </div>
+            </div>
+
+            <!-- Message Textarea -->
+            <div class="mb-4">
+              <label for="message" class="form-label fw-semibold">
+                Message <span class="text-danger">*</span>
+              </label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                [(ngModel)]="formData.message"
+                required
+                rows="5"
+                placeholder="Tell us more about your inquiry..."
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg w-100"
+              [disabled]="!contactForm.valid"
+            >
+              <i class="bi bi-send-fill me-2"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="col-lg-6">
+      <!-- Map Card -->
+      <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body p-0">
+          <div
+            class="map-placeholder bg-light d-flex align-items-center justify-content-center"
+          >
+            <div class="text-center p-5">
+              <i class="bi bi-map fs-1 text-primary mb-3"></i>
+              <h5 class="text-muted">Map Location</h5>
+              <p class="small text-muted mb-0">
+                123 Business Street<br />
+                New York, NY 10001
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Card -->
+      <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-3">
+            <i class="bi bi-share-fill me-2 text-primary"></i>
+            Connect With Us
+          </h5>
+          <p class="text-muted mb-4">
+            Follow us on social media for updates and news
+          </p>
+
+          <div class="d-flex gap-3 flex-wrap">
+            <button class="btn btn-outline-primary rounded-circle social-btn">
+              <i class="bi bi-facebook fs-5"></i>
+            </button>
+            <button class="btn btn-outline-info rounded-circle social-btn">
+              <i class="bi bi-twitter fs-5"></i>
+            </button>
+            <button class="btn btn-outline-danger rounded-circle social-btn">
+              <i class="bi bi-instagram fs-5"></i>
+            </button>
+            <button class="btn btn-outline-primary rounded-circle social-btn">
+              <i class="bi bi-linkedin fs-5"></i>
+            </button>
+            <button class="btn btn-outline-dark rounded-circle social-btn">
+              <i class="bi bi-github fs-5"></i>
+            </button>
+            <button class="btn btn-outline-danger rounded-circle social-btn">
+              <i class="bi bi-youtube fs-5"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Card -->
+      <div class="card border-0 shadow-sm mt-4 bg-light">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-3">
+            <i class="bi bi-question-circle-fill me-2 text-warning"></i>
+            Quick FAQ
+          </h5>
+          <div class="accordion accordion-flush" id="faqAccordion">
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-transparent"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                >
+                  What are your response times?
+                </button>
+              </h2>
+              <div
+                id="faq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  We typically respond to all inquiries within 24-48 hours
+                  during business days.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item bg-transparent border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-transparent"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                >
+                  Do you offer support?
+                </button>
+              </h2>
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Yes! We provide comprehensive support through email, chat, and
+                  phone.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

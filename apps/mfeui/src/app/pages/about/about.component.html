@@ -1,0 +1,133 @@
+<div class="container py-5">
+  <!-- Hero Section -->
+  <div class="row mb-5">
+    <div class="col-12 text-center">
+      <h1 class="display-4 fw-bold mb-3">About Us</h1>
+      <p class="lead text-muted col-lg-8 mx-auto">
+        We're passionate about creating modern, efficient, and user-friendly web
+        applications that help businesses grow and succeed in the digital world.
+      </p>
+    </div>
+  </div>
+
+  <!-- Mission Section -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="card border-0 shadow-sm h-100 bg-primary text-white">
+        <div class="card-body p-5">
+          <h2 class="fw-bold mb-4">
+            <i class="bi bi-bullseye me-2"></i>
+            Our Mission
+          </h2>
+          <p class="mb-0 fs-5">
+            To deliver cutting-edge web solutions that empower businesses to
+            achieve their goals through innovative technology and exceptional
+            user experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body p-5">
+          <h2 class="fw-bold mb-4 text-primary">
+            <i class="bi bi-star me-2"></i>
+            Our Vision
+          </h2>
+          <p class="mb-0 fs-5 text-muted">
+            To be the leading provider of enterprise-grade web applications,
+            known for our commitment to quality, innovation, and customer
+            satisfaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="row mb-5">
+    <div class="col-12 text-center mb-4">
+      <h2 class="fw-bold">Why Choose Us</h2>
+      <p class="text-muted">What makes our platform stand out</p>
+    </div>
+    <div class="col-md-6 col-lg-3 mb-4" *ngFor="let feature of features">
+      <div class="card border-0 shadow-sm h-100 text-center feature-card">
+        <div class="card-body p-4">
+          <div
+            class="feature-icon bg-primary bg-opacity-10 rounded-circle mx-auto mb-3"
+          >
+            <i class="bi {{ feature.icon }} text-primary fs-1"></i>
+          </div>
+          <h5 class="fw-bold mb-3">{{ feature.title }}</h5>
+          <p class="text-muted mb-0">{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="row mb-5">
+    <div class="col-12 text-center mb-4">
+      <h2 class="fw-bold">Meet Our Team</h2>
+      <p class="text-muted">The people behind the platform</p>
+    </div>
+    <div class="col-md-4 mb-4" *ngFor="let member of team">
+      <div class="card border-0 shadow-sm h-100 team-card">
+        <div class="card-body text-center p-4">
+          <img
+            [src]="member.image"
+            [alt]="member.name"
+            class="rounded-circle mb-3"
+            width="120"
+            height="120"
+          />
+          <h5 class="fw-bold mb-1">{{ member.name }}</h5>
+          <p class="text-primary mb-3">{{ member.role }}</p>
+          <div class="social-links">
+            <button
+              class="btn btn-sm btn-outline-secondary rounded-circle me-2"
+            >
+              <i class="bi bi-linkedin"></i>
+            </button>
+            <button
+              class="btn btn-sm btn-outline-secondary rounded-circle me-2"
+            >
+              <i class="bi bi-twitter"></i>
+            </button>
+            <button class="btn btn-sm btn-outline-secondary rounded-circle">
+              <i class="bi bi-github"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="card border-0 shadow-sm bg-light">
+        <div class="card-body p-5">
+          <div class="row text-center">
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h2 class="display-5 fw-bold text-primary mb-2">500+</h2>
+              <p class="text-muted mb-0">Projects Completed</p>
+            </div>
+            <div class="col-6 col-md-3 mb-4 mb-md-0">
+              <h2 class="display-5 fw-bold text-success mb-2">1000+</h2>
+              <p class="text-muted mb-0">Happy Clients</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h2 class="display-5 fw-bold text-warning mb-2">50+</h2>
+              <p class="text-muted mb-0">Team Members</p>
+            </div>
+            <div class="col-6 col-md-3">
+              <h2 class="display-5 fw-bold text-info mb-2">10+</h2>
+              <p class="text-muted mb-0">Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
