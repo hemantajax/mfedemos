@@ -1,26 +1,52 @@
 /**
- * VENDORS - Bootstrap 5
+ * VENDORS - Bootstrap 5 with Bootswatch Theme
  * Principle: Optimize - Import only what you need
- * Customize Bootstrap variables before importing
+ * 
+ * Correct import order for Bootswatch themes:
+ * 1. Bootswatch variables (overrides Bootstrap defaults)
+ * 2. Bootstrap
+ * 3. Bootswatch theme styles (additional styling)
  */
 
-// Override Bootstrap variables
+// ============================================================================
+// 1. Import Bootswatch Variables FIRST (before Bootstrap)
+// ============================================================================
+// This overrides Bootstrap's default variables with theme colors
+@import 'bootswatch/dist/flatly/variables';
+
+// ============================================================================
+// 2. Optional: Override specific variables (uncomment as needed)
+// ============================================================================
+// You can override Bootswatch variables here if needed
 // $primary: #0d6efd;
 // $secondary: #6c757d;
-// $success: #198754;
-// $danger: #dc3545;
-// $warning: #ffc107;
-// $info: #0dcaf0;
-
 // $enable-shadows: true;
 // $enable-rounded: true;
 // $enable-transitions: true;
 
-// Import Bootstrap
+// ============================================================================
+// 3. Import Bootstrap with the customized variables
+// ============================================================================
 @import 'bootstrap/scss/bootstrap';
 
-// Optional: Import Bootswatch theme (comment out if not needed)
-// @import 'bootswatch/dist/[theme-name]/bootswatch';
+// ============================================================================
+// 4. Import Bootswatch Theme Styles LAST (after Bootstrap)
+// ============================================================================
+// This adds the theme's additional styling and overrides
+@import 'bootswatch/dist/flatly/bootswatch';
+
+// ============================================================================
+// Other popular Bootswatch themes (uncomment to switch):
+// ============================================================================
+// @import 'bootswatch/dist/darkly/variables';
+// @import 'bootstrap/scss/bootstrap';
+// @import 'bootswatch/dist/darkly/bootswatch';
+
+// @import 'bootswatch/dist/lux/variables';
+// @import 'bootstrap/scss/bootstrap';
+// @import 'bootswatch/dist/lux/bootswatch';
+
+// Preview all themes at: https://bootswatch.com/
 
 /**
  * Bootstrap Customizations
