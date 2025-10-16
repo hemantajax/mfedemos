@@ -13,7 +13,6 @@
         "outputPath": "dist/apps/mfeui",
         "index": "apps/mfeui/src/index.html",
         "main": "apps/mfeui/src/main.ts",
-        "polyfills": ["zone.js"],
         "tsConfig": "apps/mfeui/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

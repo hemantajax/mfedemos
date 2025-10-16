@@ -26,8 +26,6 @@ export const appRoutes: Route[] = [
   {
     path: '**',
     loadComponent: () =>
-      import('./pages/not-found/not-found.component').then(
-        (m) => m.NotFoundComponent
-      ), // Lazy loaded
+      import('@nxmfe/shared/ui-components').then((m) => m.NotFoundComponent), // Lazy loaded
   },
 ];

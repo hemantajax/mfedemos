@@ -1,82 +1,358 @@
-# Nxmfe
+# 🚀 Nx Monorepo - Modern Angular Dashboard
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+A modern, scalable Angular 18 dashboard application built with Nx monorepo, Bootstrap 5, and **zoneless change detection** for optimal performance.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+---
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+## ✨ Features
 
-## Finish your CI setup
+### 🎯 Modern Architecture
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/cyhswtd5lD)
+- ✅ **Angular 18** with standalone components
+- ✅ **Zoneless Change Detection** for better performance
+- ✅ **Nx Monorepo** for scalability
+- ✅ **Bootstrap 5** for responsive UI
+- ✅ **TypeScript** for type safety
+- ✅ **Lazy Loading** for optimized bundles
 
+### 📦 Shared Libraries
 
-## Run tasks
+- **Layout** - Eager-loaded layout components
+- **UI Components** - Lazy-loaded page components
+- **Services** - Shared business logic
+- **Core** - Guards, interceptors, models
+- **Pipes** - Custom transformation pipes
+- **Directives** - Custom DOM directives
+- **Constants** - Application constants
+- **Utils** - Pure utility functions
+- **Styles** - Shared SCSS with Bootstrap
 
-To run the dev server for your app, use:
+### 🎨 Pages
 
-```sh
+- **Dashboard** - Main dashboard with stats and activities
+- **About** - Company information and team
+- **Contact** - Contact form and information
+- **404** - Beautiful error page
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Run the application
 npx nx serve mfeui
-```
 
-To create a production bundle:
-
-```sh
+# Build the application
 npx nx build mfeui
 ```
 
-To see all available targets to run for a project, run:
+The application will be available at `http://localhost:4200`
 
-```sh
-npx nx show project mfeui
+---
+
+## 📚 Project Structure
+
+```
+nxmfe/
+├── apps/
+│   └── mfeui/                    # Main application
+│       └── src/app/
+│           ├── pages/            # App-specific pages
+│           │   ├── dashboard/
+│           │   ├── about/
+│           │   └── contact/
+│           ├── app.ts
+│           └── app.routes.ts
+│
+├── libs/shared/                  # Shared libraries
+│   ├── layout/                   # Eager-loaded layout components
+│   ├── ui-components/            # Lazy-loaded UI components
+│   ├── services/                 # Shared services
+│   ├── core/                     # Guards, interceptors, models
+│   ├── pipes/                    # Custom pipes
+│   ├── directives/               # Custom directives
+│   ├── constants/                # App constants
+│   ├── utils/                    # Utility functions
+│   └── styles/                   # Shared SCSS styles
+│
+└── docs/                         # Documentation
+    ├── LIBRARIES_ARCHITECTURE.md
+    ├── SHARED_LIBRARIES_README.md
+    ├── ZONELESS_CONFIGURATION.md
+    └── ZONELESS_MIGRATION_COMPLETE.md
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+---
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 📖 Documentation
 
-## Add new projects
+### 🏗️ Architecture
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+- **[LIBRARIES_ARCHITECTURE.md](./LIBRARIES_ARCHITECTURE.md)** - Complete library architecture guide
+- **[SHARED_LIBRARIES_README.md](./SHARED_LIBRARIES_README.md)** - Quick reference for using libraries
 
-Use the plugin's generator to create new projects.
+### ⚡ Zoneless Configuration
 
-To generate a new application, use:
+- **[ZONELESS_CONFIGURATION.md](./ZONELESS_CONFIGURATION.md)** - Complete guide to zoneless mode
+- **[ZONELESS_MIGRATION_COMPLETE.md](./ZONELESS_MIGRATION_COMPLETE.md)** - Migration summary
 
-```sh
-npx nx g @nx/angular:app demo
+### 🎨 Styles
+
+- **[libs/shared/styles/INDEX.md](./libs/shared/styles/INDEX.md)** - Styles library documentation
+
+---
+
+## 🔧 Available Libraries
+
+| Library           | Import Path                   | Purpose                      |
+| ----------------- | ----------------------------- | ---------------------------- |
+| **layout**        | `@nxmfe/shared/layout`        | Layout components (Header)   |
+| **ui-components** | `@nxmfe/shared/ui-components` | Page components (NotFound)   |
+| **services**      | `@nxmfe/shared/services`      | Shared services              |
+| **core**          | `@nxmfe/shared/core`          | Guards, interceptors, models |
+| **pipes**         | `@nxmfe/shared/pipes`         | Custom pipes                 |
+| **directives**    | `@nxmfe/shared/directives`    | Custom directives            |
+| **constants**     | `@nxmfe/shared/constants`     | App constants                |
+| **utils**         | `@nxmfe/shared/utils`         | Utility functions            |
+| **styles**        | `@nxmfe/shared/styles`        | SCSS styles                  |
+
+---
+
+## 💡 Usage Examples
+
+### Import Components
+
+```typescript
+import { HeaderComponent } from '@nxmfe/shared/layout';
+import { NotFoundComponent } from '@nxmfe/shared/ui-components';
 ```
 
-To generate a new library, use:
+### Use Services
 
-```sh
-npx nx g @nx/angular:lib mylib
+```typescript
+import { StorageService, NotificationService } from '@nxmfe/shared/services';
+
+constructor(private storage: StorageService) {}
+
+this.storage.setItem('user', userData);
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+### Use Utilities
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```typescript
+import { capitalize, formatDate, unique } from '@nxmfe/shared/utils';
 
+const title = capitalize('hello world');
+const formatted = formatDate(new Date());
+```
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+### Use Pipes
 
-## Install Nx Console
+```typescript
+import { TruncatePipe, TimeAgoPipe } from '@nxmfe/shared/pipes';
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+@Component({
+  imports: [TruncatePipe, TimeAgoPipe],
+  template: `
+    {{ longText | truncate:50 }}
+    {{ date | timeAgo }}
+  `
+})
+```
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+---
 
-## Useful links
+## 🧪 Testing
 
-Learn more:
+```bash
+# Run all tests
+npx nx test mfeui
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+# Run tests for specific library
+npx nx test services
 
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+# Run e2e tests
+npx nx e2e mfeui-e2e
+```
+
+---
+
+## 📦 Building
+
+```bash
+# Build application
+npx nx build mfeui
+
+# Build specific library
+npx nx build ui-components
+
+# Build all libraries
+npx nx run-many --target=build --all
+```
+
+---
+
+## 🎯 Key Technologies
+
+- **Angular 18** - Modern web framework
+- **Nx** - Monorepo build system
+- **Bootstrap 5** - CSS framework
+- **TypeScript** - Type-safe JavaScript
+- **SCSS** - CSS preprocessor
+- **Jest** - Unit testing
+- **Playwright** - E2E testing
+
+---
+
+## ⚡ Performance Features
+
+### Zoneless Change Detection
+
+- No Zone.js dependency (~47KB reduction)
+- More efficient change detection
+- Better runtime performance
+
+### Lazy Loading
+
+- Route-based code splitting
+- Smaller initial bundle size
+- Faster first load
+
+### Nx Caching
+
+- Smart build caching
+- Only rebuild what changed
+- Faster CI/CD pipelines
+
+---
+
+## 🎨 UI Features
+
+- **Responsive Design** - Mobile, tablet, desktop
+- **Bootstrap 5** - Modern, clean UI
+- **Bootstrap Icons** - 1,800+ icons
+- **Sticky Header** - Always accessible navigation
+- **Smooth Animations** - Professional transitions
+- **Form Validation** - Real-time feedback
+
+---
+
+## 📝 Available Scripts
+
+```bash
+# Development
+npm run start              # Start dev server
+
+# Building
+npm run build              # Build production app
+
+# Testing
+npm run test               # Run unit tests
+npm run e2e                # Run e2e tests
+
+# Code Quality
+npm run lint               # Run linter
+npm run format             # Format code
+
+# Nx Commands
+npx nx graph               # View dependency graph
+npx nx affected:test       # Test affected projects
+npx nx affected:build      # Build affected projects
+```
+
+---
+
+## 🌟 Highlights
+
+### ✅ Best Practices
+
+- Standalone components
+- Signals-based reactivity
+- OnPush change detection ready
+- Lazy loading for performance
+- Clear library separation
+- TypeScript strict mode
+
+### ✅ Developer Experience
+
+- Type-safe imports
+- Auto-completion in IDE
+- Clear documentation
+- Consistent code style
+- Fast builds with Nx
+
+### ✅ Production Ready
+
+- Optimized bundles
+- Tree-shakeable libraries
+- Performance monitoring
+- Error handling
+- SEO friendly
+
+---
+
+## 🚧 Roadmap
+
+### Potential Future Additions
+
+- [ ] Authentication & Authorization
+- [ ] State Management (Signals/NgRx)
+- [ ] Data Visualization (Charts)
+- [ ] Real-time Updates (WebSockets)
+- [ ] Internationalization (i18n)
+- [ ] Theme Switcher (Dark/Light mode)
+- [ ] Progressive Web App (PWA)
+- [ ] Backend Integration (API)
+
+---
+
+## 📚 Learn More
+
+- [Angular Documentation](https://angular.dev)
+- [Nx Documentation](https://nx.dev)
+- [Bootstrap Documentation](https://getbootstrap.com)
+- [TypeScript Documentation](https://www.typescriptlang.org)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read the architecture documentation before making changes.
+
+1. Follow the library structure
+2. Use TypeScript strict mode
+3. Write unit tests
+4. Update documentation
+5. Follow code style
+
+---
+
+## 📄 License
+
+This project is for demonstration purposes.
+
+---
+
+## 🎉 Summary
+
+A modern, performant, and scalable Angular 18 dashboard application with:
+
+- ⚡ **Zoneless change detection** for better performance
+- 📦 **9 shared libraries** for code reuse
+- 🎨 **Bootstrap 5** for beautiful UI
+- 🔧 **Nx monorepo** for scalability
+- ✅ **Production-ready** architecture
+
+---
+
+**Built with ❤️ using Angular 18, Nx, and Bootstrap 5**
