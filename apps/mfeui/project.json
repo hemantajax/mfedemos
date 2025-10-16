@@ -7,7 +7,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/mfeui",
@@ -21,7 +21,10 @@
             "input": "apps/mfeui/public"
           }
         ],
-        "styles": ["apps/mfeui/src/styles.scss"]
+        "styles": ["apps/mfeui/src/styles.scss"],
+        "customWebpackConfig": {
+          "path": "apps/mfeui/webpack.config.ts"
+        }
       },
       "configurations": {
         "production": {
@@ -37,7 +40,10 @@
               "maximumError": "8kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/mfeui/webpack.prod.config.ts"
+          }
         },
         "development": {
           "buildOptimizer": false,
@@ -52,7 +58,7 @@
     },
     "serve": {
       "continuous": true,
-      "executor": "@angular-devkit/build-angular:dev-server",
+      "executor": "@nx/angular:module-federation-dev-server",
       "configurations": {
         "production": {
           "buildTarget": "mfeui:build:production"
@@ -61,7 +67,11 @@
           "buildTarget": "mfeui:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4200,
+        "publicHost": "http://localhost:4200"
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
