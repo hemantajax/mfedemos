@@ -1,0 +1,55 @@
+🚀 Add GitHub Pages deployment with CI/CD
+
+## Features Added
+- GitHub Actions workflow for automatic deployment
+- Build scripts for GitHub Pages deployment
+- Manual deployment via npm scripts
+- Local testing capability before deployment
+- Module Federation configuration for production
+- Comprehensive documentation
+
+## New Files
+- .github/workflows/deploy.yml - Auto deployment workflow
+- .github/workflows/preview.yml - PR preview workflow
+- scripts/deploy-gh-pages.js - Deployment build script
+- scripts/test-local-gh-pages.js - Local testing script
+- apps/mfeui/module-federation.config.prod.ts - Production config
+- DEPLOYMENT.md - Complete deployment guide
+- GITHUB_PAGES_SETUP.md - Setup instructions
+- GITHUB_PAGES_DEPLOYMENT_SUMMARY.md - Quick summary
+- NPM_SCRIPTS_REFERENCE.md - npm scripts reference
+- .nojekyll - GitHub Pages configuration
+
+## Modified Files
+- package.json - Added deployment npm scripts
+- README.md - Updated with deployment info
+
+## npm Scripts Added
+- npm run build:gh-pages - Build for GitHub Pages
+- npm run test:gh-pages - Test build locally
+- npm run deploy - Deploy to GitHub Pages
+
+## Deployment URL
+https://hemantajax.github.io/mfedemos/
+
+## Architecture
+- Host: /mfedemos/
+- Products Remote: /mfedemos/products/
+- Cart Remote: /mfedemos/cart/
+
+## Next Steps
+1. Push this commit to GitHub
+2. Enable GitHub Pages: Settings → Pages → Source: GitHub Actions
+3. Wait for automatic deployment (~2-3 minutes)
+4. Visit: https://hemantajax.github.io/mfedemos/
+
+---
+
+This setup provides:
+✅ Automatic deployment on push to main
+✅ Manual deployment option
+✅ Local testing before deployment
+✅ Module Federation support in production
+✅ Complete documentation
+✅ CI/CD pipeline with GitHub Actions
+

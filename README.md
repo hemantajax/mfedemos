@@ -1,6 +1,12 @@
-# 🚀 Nx Monorepo - Modern Angular Dashboard
+# 🚀 Nx Monorepo - Micro-Frontend Architecture with Angular 18
 
-A modern, scalable Angular 18 dashboard application built with Nx monorepo, Bootstrap 5, and **zoneless change detection** for optimal performance.
+A modern, scalable Angular 18 micro-frontend application built with Nx monorepo, Module Federation, Bootstrap 5, and **zoneless change detection** for optimal performance.
+
+## 🌐 Live Demo
+
+**🔗 [View Live Application](https://hemantajax.github.io/mfedemos/)**
+
+> Deployed automatically to GitHub Pages via GitHub Actions
 
 ---
 
@@ -9,11 +15,13 @@ A modern, scalable Angular 18 dashboard application built with Nx monorepo, Boot
 ### 🎯 Modern Architecture
 
 - ✅ **Angular 18** with standalone components
+- ✅ **Micro-Frontend (Module Federation)** for independent deployments
 - ✅ **Zoneless Change Detection** for better performance
 - ✅ **Nx Monorepo** for scalability
 - ✅ **Bootstrap 5** for responsive UI
 - ✅ **TypeScript** for type safety
 - ✅ **Lazy Loading** for optimized bundles
+- ✅ **GitHub Pages** deployment with CI/CD
 
 ### 📦 Shared Libraries
 
@@ -49,14 +57,29 @@ A modern, scalable Angular 18 dashboard application built with Nx monorepo, Boot
 # Install dependencies
 npm install
 
-# Run the application
-npx nx serve mfeui
+# Development - Start all micro-frontends
+npm run serve:all
 
-# Build the application
-npx nx build mfeui
+# Or start individually:
+npm run serve:host      # Host app (port 4200)
+npm run serve:products  # Products remote (port 4201)
+npm run serve:cart      # Cart remote (port 4202)
 ```
 
 The application will be available at `http://localhost:4200`
+
+### Production Build
+
+```bash
+# Build all applications
+npm run build:all:prod
+
+# Build for GitHub Pages
+npm run build:gh-pages
+
+# Deploy to GitHub Pages
+npm run deploy
+```
 
 ---
 
@@ -65,14 +88,25 @@ The application will be available at `http://localhost:4200`
 ```
 nxmfe/
 ├── apps/
-│   └── mfeui/                    # Main application
+│   ├── mfeui/                    # Host application (Shell)
+│   │   ├── module-federation.config.ts
+│   │   └── src/app/
+│   │       ├── pages/            # App-specific pages
+│   │       │   ├── dashboard/
+│   │       │   ├── about/
+│   │       │   └── contact/
+│   │       ├── app.ts
+│   │       └── app.routes.ts
+│   │
+│   ├── products/                 # Products micro-frontend
+│   │   ├── module-federation.config.ts
+│   │   └── src/app/
+│   │       └── remote-entry/
+│   │
+│   └── cart/                     # Cart micro-frontend
+│       ├── module-federation.config.ts
 │       └── src/app/
-│           ├── pages/            # App-specific pages
-│           │   ├── dashboard/
-│           │   ├── about/
-│           │   └── contact/
-│           ├── app.ts
-│           └── app.routes.ts
+│           └── remote-entry/
 │
 ├── libs/shared/                  # Shared libraries
 │   ├── layout/                   # Eager-loaded layout components
@@ -100,11 +134,17 @@ nxmfe/
 
 - **[LIBRARIES_ARCHITECTURE.md](./LIBRARIES_ARCHITECTURE.md)** - Complete library architecture guide
 - **[SHARED_LIBRARIES_README.md](./SHARED_LIBRARIES_README.md)** - Quick reference for using libraries
+- **[mfe.md](./mfe.md)** - Micro-frontend architecture guide
 
 ### ⚡ Zoneless Configuration
 
 - **[ZONELESS_CONFIGURATION.md](./ZONELESS_CONFIGURATION.md)** - Complete guide to zoneless mode
 - **[ZONELESS_MIGRATION_COMPLETE.md](./ZONELESS_MIGRATION_COMPLETE.md)** - Migration summary
+
+### 🚀 Deployment
+
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Complete deployment guide
+- **[GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md)** - Step-by-step GitHub Pages setup
 
 ### 🎨 Styles
 
@@ -205,12 +245,15 @@ npx nx run-many --target=build --all
 ## 🎯 Key Technologies
 
 - **Angular 18** - Modern web framework
+- **Module Federation** - Micro-frontend architecture
 - **Nx** - Monorepo build system
 - **Bootstrap 5** - CSS framework
 - **TypeScript** - Type-safe JavaScript
 - **SCSS** - CSS preprocessor
 - **Jest** - Unit testing
 - **Playwright** - E2E testing
+- **GitHub Actions** - CI/CD pipeline
+- **GitHub Pages** - Static site hosting
 
 ---
 
@@ -249,22 +292,57 @@ npx nx run-many --target=build --all
 
 ## 📝 Available Scripts
 
+### Development
+
 ```bash
-# Development
-npm run start              # Start dev server
+npm run start              # Start host application
+npm run serve:all          # Start all micro-frontends
+npm run serve:host         # Start host only
+npm run serve:products     # Start products remote
+npm run serve:cart         # Start cart remote
+```
 
-# Building
-npm run build              # Build production app
+### Building
 
-# Testing
-npm run test               # Run unit tests
+```bash
+npm run build:all          # Build all applications
+npm run build:all:prod     # Build all for production
+npm run build:gh-pages     # Build for GitHub Pages
+npm run build:host         # Build host only
+npm run build:products     # Build products remote
+npm run build:cart         # Build cart remote
+```
+
+### Deployment
+
+```bash
+npm run deploy             # Build and deploy to GitHub Pages
+npm run test:gh-pages      # Test GitHub Pages build locally
+```
+
+### Testing
+
+```bash
+npm run test               # Run all tests
+npm run test:mfeui         # Test host app
+npm run test:products      # Test products remote
+npm run test:cart          # Test cart remote
+npm run test:all           # Test all apps
 npm run e2e                # Run e2e tests
+```
 
-# Code Quality
-npm run lint               # Run linter
+### Code Quality
+
+```bash
+npm run lint               # Lint all projects
+npm run lint:fix           # Lint and fix issues
 npm run format             # Format code
+npm run format:check       # Check formatting
+```
 
-# Nx Commands
+### Nx Commands
+
+```bash
 npx nx graph               # View dependency graph
 npx nx affected:test       # Test affected projects
 npx nx affected:build      # Build affected projects
