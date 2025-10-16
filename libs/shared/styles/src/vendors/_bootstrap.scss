@@ -1,0 +1,67 @@
+/**
+ * VENDORS - Bootstrap 5
+ * Principle: Optimize - Import only what you need
+ * Customize Bootstrap variables before importing
+ */
+
+// Override Bootstrap variables
+// $primary: #0d6efd;
+// $secondary: #6c757d;
+// $success: #198754;
+// $danger: #dc3545;
+// $warning: #ffc107;
+// $info: #0dcaf0;
+
+// $enable-shadows: true;
+// $enable-rounded: true;
+// $enable-transitions: true;
+
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Optional: Import Bootswatch theme (comment out if not needed)
+// @import 'bootswatch/dist/[theme-name]/bootswatch';
+
+/**
+ * Bootstrap Customizations
+ * Keep specificity low by using single classes
+ */
+
+// Custom Bootstrap overrides
+// .btn {
+//   transition: var(--transition-fast);
+//   font-weight: var(--font-weight-medium);
+
+//   &:focus-visible {
+//     @include focus-visible;
+//   }
+// }
+
+// .card {
+//   transition: var(--transition-base);
+
+//   &:hover {
+//     transform: translateY(-2px);
+//     box-shadow: var(--shadow-lg);
+//   }
+// }
+
+// .form-control,
+// .form-select {
+//   transition: var(--transition-fast);
+
+//   &:focus {
+//     box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+//   }
+// }
+
+// // Performance optimization: Reduce motion for users who prefer it
+// @media (prefers-reduced-motion: reduce) {
+//   *,
+//   *::before,
+//   *::after {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//   }
+// }

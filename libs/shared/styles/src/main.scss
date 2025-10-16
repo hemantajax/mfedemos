@@ -1,0 +1,75 @@
+/**
+ * Main Styles Entry Point
+ * Following 7 Principles of Clean and Optimized CSS:
+ * 1. Consistent Naming Convention (BEM)
+ * 2. Logical Structure & Organization
+ * 3. Low Specificity
+ * 4. DRY Principle
+ * 5. CSS Variables for Theming
+ * 6. Modularization
+ * 7. Performance Optimization
+ */
+
+// ============================================================================
+// 1. ABSTRACTS - Variables, Functions, Mixins
+// ============================================================================
+// Keep these active - useful for customization and theming
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// ============================================================================
+// 2. VENDORS - Third-party styles (Bootstrap 5)
+// ============================================================================
+// Bootstrap 5 provides comprehensive styling out of the box
+@import 'vendors/bootstrap';
+
+// ============================================================================
+// 3. BASE - Reset, Typography, Base Styles
+// ============================================================================
+// Bootstrap already handles most base styles
+// Uncomment these if you need additional customizations
+// @import 'base/reset';
+// @import 'base/typography';
+// @import 'base/base';
+
+// ============================================================================
+// 4. LAYOUTS - Grid System, Layout Components
+// ============================================================================
+// Bootstrap has excellent grid system and layout utilities
+// Uncomment specific layouts as needed
+// @import 'layouts/grid';
+// @import 'layouts/header';
+// @import 'layouts/footer';
+// @import 'layouts/sidebar';
+
+// ============================================================================
+// 5. COMPONENTS - Reusable UI Components
+// ============================================================================
+// Bootstrap provides most common components
+// Uncomment specific components if you need custom styling beyond Bootstrap
+// @import 'components/buttons';
+// @import 'components/cards';
+// @import 'components/forms';
+// @import 'components/modals';
+// @import 'components/navigation';
+
+// ============================================================================
+// 6. THEMES - Theme Configurations
+// ============================================================================
+// Uncomment if you want light/dark theme support
+// @import 'themes/default';
+
+// ============================================================================
+// 7. UTILITIES - Helper Classes
+// ============================================================================
+// Bootstrap has comprehensive utility classes
+// Uncomment specific utilities if you need additional helpers
+// @import 'utilities/spacing';
+// @import 'utilities/text';
+// @import 'utilities/display';
+
+// ============================================================================
+// 8. YOUR CUSTOM STYLES
+// ============================================================================
+// Add your custom styles below or create new files and import them here
