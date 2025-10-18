@@ -23,10 +23,19 @@ function fixManifest(manifestPath) {
       // Replace localhost URLs with GitHub Pages URLs
       if (originalUrl.includes('localhost:4201')) {
         remote.federationContainerName = `${GITHUB_PAGES_URL}products/remoteEntry.mjs`;
-        console.log(`✅ Fixed products remote: ${originalUrl} -> ${remote.federationContainerName}`);
+        console.log(
+          `✅ Fixed products remote: ${originalUrl} -> ${remote.federationContainerName}`
+        );
       } else if (originalUrl.includes('localhost:4202')) {
         remote.federationContainerName = `${GITHUB_PAGES_URL}cart/remoteEntry.mjs`;
-        console.log(`✅ Fixed cart remote: ${originalUrl} -> ${remote.federationContainerName}`);
+        console.log(
+          `✅ Fixed cart remote: ${originalUrl} -> ${remote.federationContainerName}`
+        );
+      } else if (originalUrl.includes('localhost:4203')) {
+        remote.federationContainerName = `${GITHUB_PAGES_URL}profile/remoteEntry.mjs`;
+        console.log(
+          `✅ Fixed profile remote: ${originalUrl} -> ${remote.federationContainerName}`
+        );
       }
 
       return remote;
@@ -42,6 +51,3 @@ fixManifest(path.join(__dirname, '../dist/apps/mfeui/mf-manifest.json'));
 fixManifest(path.join(__dirname, '../dist/gh-pages/mf-manifest.json'));
 
 console.log('✅ Module Federation manifests fixed for GitHub Pages deployment');
-
-
-

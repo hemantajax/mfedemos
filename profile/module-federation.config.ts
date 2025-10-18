@@ -5,6 +5,8 @@ const config: ModuleFederationConfig = {
   exposes: {
     './Routes': 'profile/src/app/remote-entry/entry.routes.ts',
   },
+  // Nx automatically shares all npm packages and workspace libraries as singletons by default
+  // No need for explicit shared configuration
 };
 
 /**

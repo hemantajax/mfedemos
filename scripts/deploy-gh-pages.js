@@ -31,6 +31,13 @@ execSync(
   { stdio: 'inherit' }
 );
 
+// Build Profile Remote
+console.log('\n📦 Building Profile remote...');
+execSync(
+  `npx nx build profile --configuration=production --skip-nx-cache --baseHref=${BASE_HREF}profile/ --deployUrl=${BASE_HREF}profile/`,
+  { stdio: 'inherit' }
+);
+
 // Build Host
 console.log('\n📦 Building Host application...');
 execSync(
@@ -56,6 +63,11 @@ if (fs.existsSync('dist/apps/products')) {
 if (fs.existsSync('dist/apps/cart')) {
   fs.cpSync('dist/apps/cart', 'dist/gh-pages/cart', { recursive: true });
   console.log('✅ Cart copied to dist/gh-pages/cart');
+}
+
+if (fs.existsSync('dist/profile')) {
+  fs.cpSync('dist/profile', 'dist/gh-pages/profile', { recursive: true });
+  console.log('✅ Profile copied to dist/gh-pages/profile');
 }
 
 // Copy host
@@ -116,6 +128,7 @@ console.log('✅ Created .nojekyll file');
 const remotesConfig = {
   products: `${GITHUB_PAGES_URL}products/remoteEntry.mjs`,
   cart: `${GITHUB_PAGES_URL}cart/remoteEntry.mjs`,
+  profile: `${GITHUB_PAGES_URL}profile/remoteEntry.mjs`,
 };
 
 const remotesConfigPath = 'dist/gh-pages/remotes.json';
@@ -127,4 +140,5 @@ console.log(`\n📍 Deployment structure:`);
 console.log(`   - Host:     ${GITHUB_PAGES_URL}`);
 console.log(`   - Products: ${GITHUB_PAGES_URL}products/`);
 console.log(`   - Cart:     ${GITHUB_PAGES_URL}cart/`);
+console.log(`   - Profile:  ${GITHUB_PAGES_URL}profile/`);
 console.log(`\n💡 To deploy manually, run: npm run deploy:gh-pages:manual`);

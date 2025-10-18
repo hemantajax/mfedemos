@@ -5,6 +5,9 @@ const config: ModuleFederationConfig = {
   /**
    * Production configuration for GitHub Pages
    * Remotes are loaded from the deployed GitHub Pages URLs
+   *
+   * Nx automatically shares all npm packages and workspace libraries as singletons by default
+   * No need for explicit shared configuration
    */
   remotes: [
     [
@@ -12,6 +15,10 @@ const config: ModuleFederationConfig = {
       'https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs',
     ],
     ['cart', 'https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs'],
+    [
+      'profile',
+      'https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs',
+    ],
   ],
 };
 
