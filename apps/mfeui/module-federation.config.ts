@@ -3,18 +3,60 @@ import { ModuleFederationConfig } from '@nx/module-federation';
 const config: ModuleFederationConfig = {
   name: 'mfeui',
   /**
-   * To use a remote that does not exist in your current Nx Workspace
-   * You can use the tuple-syntax to define your remote
-   *
-   * remotes: [['my-external-remote', 'https://nx-angular-remote.netlify.app']]
-   *
-   * You _may_ need to add a `remotes.d.ts` file to your `src/` folder declaring the external remote for tsc, with the
-   * following content:
-   *
-   * declare module 'my-external-remote';
-   *
+   * For production GitHub Pages deployment, use full URLs
+   * For local development, change to: remotes: ['products', 'cart']
    */
-  remotes: ['products', 'cart'],
+  remotes: [
+    [
+      'products',
+      'https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs',
+    ],
+    ['cart', 'https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs'],
+  ],
+  shared: {
+    '@angular/core': {
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    },
+    '@angular/common': {
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    },
+    '@angular/router': {
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    },
+    '@angular/platform-browser': {
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    },
+    '@angular/platform-browser-dynamic': {
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    },
+    '@angular/forms': {
+      singleton: true,
+      strictVersion: true,
+      requiredVersion: 'auto',
+    },
+    rxjs: { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+    tslib: { singleton: true },
+    bootstrap: {
+      singleton: true,
+      strictVersion: false,
+      requiredVersion: 'auto',
+    },
+    bootswatch: {
+      singleton: true,
+      strictVersion: false,
+      requiredVersion: 'auto',
+    },
+  },
 };
 
 /**

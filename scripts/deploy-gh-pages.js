@@ -38,6 +38,10 @@ execSync(
   { stdio: 'inherit' }
 );
 
+// Fix module federation manifest to use GitHub Pages URLs
+console.log('\n🔧 Fixing module federation manifests...');
+execSync('node scripts/fix-mf-manifest.js', { stdio: 'inherit' });
+
 // Copy built files to gh-pages directory
 console.log('\n📁 Organizing files for deployment...');
 
