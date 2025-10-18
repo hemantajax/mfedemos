@@ -1,0 +1,5 @@
+.main-content {
+  min-height: calc(100vh - 56px); // 56px is typical navbar height
+  background-color: var(--bs-light, #f8f9fa);
+}
+

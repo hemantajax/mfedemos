@@ -44,3 +44,4 @@ fixManifest(path.join(__dirname, '../dist/gh-pages/mf-manifest.json'));
 console.log('✅ Module Federation manifests fixed for GitHub Pages deployment');
 
 
+

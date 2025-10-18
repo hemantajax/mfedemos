@@ -3,60 +3,14 @@ import { ModuleFederationConfig } from '@nx/module-federation';
 const config: ModuleFederationConfig = {
   name: 'mfeui',
   /**
-   * For production GitHub Pages deployment, use full URLs
-   * For local development, change to: remotes: ['products', 'cart']
+   * For local development, Nx automatically resolves remotes to their dev server URLs
+   * Based on the ports configured in project.json:
+   * - products: http://localhost:4201
+   * - cart: http://localhost:4202
+   *
+   * For production, use module-federation.config.prod.ts
    */
-  remotes: [
-    [
-      'products',
-      'https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs',
-    ],
-    ['cart', 'https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs'],
-  ],
-  shared: {
-    '@angular/core': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/common': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/router': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/platform-browser': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/platform-browser-dynamic': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/forms': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    rxjs: { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-    tslib: { singleton: true },
-    bootstrap: {
-      singleton: true,
-      strictVersion: false,
-      requiredVersion: 'auto',
-    },
-    bootswatch: {
-      singleton: true,
-      strictVersion: false,
-      requiredVersion: 'auto',
-    },
-  },
+  remotes: ['products', 'cart'],
 };
 
 /**
