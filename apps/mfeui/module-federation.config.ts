@@ -10,7 +10,7 @@ const config: ModuleFederationConfig = {
    *
    * For production, use module-federation.config.prod.ts
    */
-  remotes: ['products', 'cart'],
+  remotes: ['products', 'cart', 'profile'],
 };
 
 /**

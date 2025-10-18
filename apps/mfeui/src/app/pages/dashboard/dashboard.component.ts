@@ -41,7 +41,7 @@ export class DashboardComponent {
       icon: 'bi-person-circle',
       color: 'info',
       url: '/profile',
-      status: 'planned',
+      status: 'active',
       remoteEntry: 'http://localhost:4203/remoteEntry.js',
       port: 4203,
     },
