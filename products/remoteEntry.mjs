@@ -22,7 +22,7 @@
 /* harmony export */   yq: () => (/* binding */ ENCODE_NAME_PREFIX)
 /* harmony export */ });
 /* unused harmony exports BROWSER_LOG_KEY, EncodedNameTransformMap, FederationModuleManifest, MANIFEST_EXT, MFModuleType, MFPrefetchCommon, MODULE_DEVTOOL_IDENTIFIER, ManifestFileName, NameTransformMap, NameTransformSymbol, SEPARATOR, StatsFileName, TEMP_DIR, assert, containerPlugin, containerReferencePlugin, createModuleFederationConfig, createScriptNode, encodeName, error, generateExposeFilename, generateShareFilename, getProcessEnv, inferAutoPublicPath, isRequiredVersion, isStaticResourcesEqual, logger, moduleFederationPlugin, normalizeOptions, parseEntry, safeWrapper, sharePlugin, simpleJoinRemoteEntry */
-/* harmony import */ var _home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4523);
+/* harmony import */ var _Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4523);
 /* harmony import */ var _polyfills_esm_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8046);
 
 
@@ -452,7 +452,7 @@ function safeWrapper(_x, _x2) {
   return _safeWrapper.apply(this, arguments);
 }
 function _safeWrapper() {
-  _safeWrapper = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (callback, disableWarn) {
+  _safeWrapper = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (callback, disableWarn) {
     try {
       const res = yield callback();
       return res;
@@ -522,7 +522,7 @@ function createScript(info) {
     }
   }
   const onScriptComplete = /*#__PURE__*/function () {
-    var _ref = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (prev,
+    var _ref = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (prev,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     event) {
       clearTimeout(timeoutId);
@@ -688,7 +688,7 @@ function importNodeModule(name) {
   return promise;
 }
 const loadNodeFetch = /*#__PURE__*/function () {
-  var _ref2 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* () {
+  var _ref2 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* () {
     const fetchModule = yield importNodeModule('node-fetch');
     return fetchModule.default || fetchModule;
   });
@@ -697,7 +697,7 @@ const loadNodeFetch = /*#__PURE__*/function () {
   };
 }();
 const lazyLoaderHookFetch = /*#__PURE__*/function () {
-  var _ref3 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (input, init, loaderHook) {
+  var _ref3 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (input, init, loaderHook) {
     const hook = (url, init) => {
       return loaderHook.lifecycle.fetch.emit(url, init);
     };
@@ -728,7 +728,7 @@ const createScriptNode = typeof ENV_TARGET === 'undefined' || ENV_TARGET !== 'we
     return;
   }
   const getFetch = /*#__PURE__*/function () {
-    var _ref4 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* () {
+    var _ref4 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* () {
       if (loaderHook == null ? void 0 : loaderHook.fetch) {
         return (input, init) => lazyLoaderHookFetch(input, init, loaderHook);
       }
@@ -739,7 +739,7 @@ const createScriptNode = typeof ENV_TARGET === 'undefined' || ENV_TARGET !== 'we
     };
   }();
   const handleScriptFetch = /*#__PURE__*/function () {
-    var _ref5 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (f, urlObj) {
+    var _ref5 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (f, urlObj) {
       try {
         var
         //@ts-ignore
@@ -777,13 +777,13 @@ const createScriptNode = typeof ENV_TARGET === 'undefined' || ENV_TARGET !== 'we
     };
   }();
   getFetch().then(/*#__PURE__*/function () {
-    var _ref6 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (f) {
+    var _ref6 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (f) {
       if ((attrs == null ? void 0 : attrs['type']) === 'esm' || (attrs == null ? void 0 : attrs['type']) === 'module') {
         return loadModule(urlObj.href, {
           fetch: f,
           vm: yield importNodeModule('vm')
         }).then(/*#__PURE__*/function () {
-          var _ref7 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (module) {
+          var _ref7 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (module) {
             yield module.evaluate();
             cb(undefined, module.namespace);
           });
@@ -826,7 +826,7 @@ function loadModule(_x10, _x11) {
   return _loadModule.apply(this, arguments);
 }
 function _loadModule() {
-  _loadModule = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (url, options) {
+  _loadModule = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (url, options) {
     // Check cache to prevent infinite recursion in ESM loading
     if (esmModuleCache.has(url)) {
       return esmModuleCache.get(url);
@@ -840,7 +840,7 @@ function _loadModule() {
     const module = new vm.SourceTextModule(code, {
       // @ts-ignore
       importModuleDynamically: function () {
-        var _ref8 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (specifier, script) {
+        var _ref8 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (specifier, script) {
           const resolvedUrl = new URL(specifier, url).href;
           return loadModule(resolvedUrl, options);
         });
@@ -852,7 +852,7 @@ function _loadModule() {
     // Cache the module before linking to prevent cycles
     esmModuleCache.set(url, module);
     yield module.link(/*#__PURE__*/function () {
-      var _ref9 = (0,_home_runner_work_mfedemos_mfedemos_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (specifier) {
+      var _ref9 = (0,_Users_hemant_Documents_nxmfe_node_modules_angular_devkit_build_angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(function* (specifier) {
         const resolvedUrl = new URL(specifier, url).href;
         const module = yield loadModule(resolvedUrl, options);
         return module;
@@ -894,7 +894,45 @@ const createModuleFederationConfig = options => {
 
 /***/ }),
 
-/***/ 4099:
+/***/ 1646:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var moduleMap = {
+	"./Routes": () => {
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(287), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4004)))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope, remoteEntryInitOptions) => {
+	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
+		shareScope: shareScope,
+		initScope: initScope,
+		remoteEntryInitOptions: remoteEntryInitOptions,
+		shareScopeKey: "default"
+	})
+};
+
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
+
+/***/ }),
+
+/***/ 3708:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -4901,7 +4939,7 @@ const federation = {
 };
 
 //# sourceMappingURL=index.esm.js.map
-;// ./node_modules/.federation/entry.1f6ae59179e2f03380b8c07611d028a2.js
+;// ./node_modules/.federation/entry.fc7b2e403ac412bf6112564bb6d84963.js
 
 if (!__webpack_require__.federation.runtime) {
   var prevFederation = __webpack_require__.federation;
@@ -4960,44 +4998,6 @@ function _asyncToGenerator(n) {
   };
 }
 
-
-/***/ }),
-
-/***/ 7412:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var moduleMap = {
-	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(287), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4004)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope, remoteEntryInitOptions) => {
-	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
-		shareScope: shareScope,
-		initScope: initScope,
-		remoteEntryInitOptions: remoteEntryInitOptions,
-		shareScopeKey: "default"
-	})
-};
-
-
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
 
 /***/ }),
 
@@ -5446,7 +5446,7 @@ function _extends() {
 /******/ 	__webpack_require__.x = () => {
 /******/ 		if (!hasRun) {
 /******/ 		  hasRun = true;
-/******/ 		  __webpack_require__(4099);
+/******/ 		  __webpack_require__(3708);
 /******/ 		}
 /******/ 		if (typeof prevStartup === 'function') {
 /******/ 		  return prevStartup();
@@ -5552,7 +5552,7 @@ function _extends() {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(7412);
+/******/ var __webpack_exports__ = __webpack_require__(1646);
 /******/ const __webpack_exports__get = __webpack_exports__.get;
 /******/ const __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };
