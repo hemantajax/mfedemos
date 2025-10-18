@@ -20,21 +20,21 @@ fs.mkdirSync('dist/gh-pages', { recursive: true });
 // Build Products Remote
 console.log('\n📦 Building Products remote...');
 execSync(
-  `npx nx build products --configuration=production --baseHref=${BASE_HREF}products/ --deployUrl=${BASE_HREF}products/`,
+  `npx nx build products --configuration=production --skip-nx-cache --baseHref=${BASE_HREF}products/ --deployUrl=${BASE_HREF}products/`,
   { stdio: 'inherit' }
 );
 
 // Build Cart Remote
 console.log('\n📦 Building Cart remote...');
 execSync(
-  `npx nx build cart --configuration=production --baseHref=${BASE_HREF}cart/ --deployUrl=${BASE_HREF}cart/`,
+  `npx nx build cart --configuration=production --skip-nx-cache --baseHref=${BASE_HREF}cart/ --deployUrl=${BASE_HREF}cart/`,
   { stdio: 'inherit' }
 );
 
 // Build Host
 console.log('\n📦 Building Host application...');
 execSync(
-  `npx nx build mfeui --configuration=production --baseHref=${BASE_HREF} --deployUrl=${BASE_HREF}`,
+  `npx nx build mfeui --configuration=production --skip-nx-cache --baseHref=${BASE_HREF} --deployUrl=${BASE_HREF}`,
   { stdio: 'inherit' }
 );
 
@@ -43,7 +43,9 @@ console.log('\n📁 Organizing files for deployment...');
 
 // Copy remotes
 if (fs.existsSync('dist/apps/products')) {
-  fs.cpSync('dist/apps/products', 'dist/gh-pages/products', { recursive: true });
+  fs.cpSync('dist/apps/products', 'dist/gh-pages/products', {
+    recursive: true,
+  });
   console.log('✅ Products copied to dist/gh-pages/products');
 }
 
@@ -122,4 +124,3 @@ console.log(`   - Host:     ${GITHUB_PAGES_URL}`);
 console.log(`   - Products: ${GITHUB_PAGES_URL}products/`);
 console.log(`   - Cart:     ${GITHUB_PAGES_URL}cart/`);
 console.log(`\n💡 To deploy manually, run: npm run deploy:gh-pages:manual`);
-
