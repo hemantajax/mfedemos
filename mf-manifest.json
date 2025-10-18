@@ -199,13 +199,13 @@
   ],
   "remotes": [
     {
-      "federationContainerName": "http://localhost:4202/remoteEntry.mjs",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs",
       "moduleName": "Routes",
       "alias": "cart",
       "entry": "*"
     },
     {
-      "federationContainerName": "http://localhost:4201/remoteEntry.mjs",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs",
       "moduleName": "Routes",
       "alias": "products",
       "entry": "*"

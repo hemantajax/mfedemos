@@ -236,7 +236,7 @@
     {
       "alias": "cart",
       "consumingFederationContainerName": "mfeui",
-      "federationContainerName": "http://localhost:4202/remoteEntry.mjs",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs",
       "moduleName": "Routes",
       "usedIn": [
         "consume shared module (default) cart/Routes@* (strict) (fallback: apps/cart/src/app/remote-entry/entry.routes.ts)"
@@ -246,7 +246,7 @@
     {
       "alias": "products",
       "consumingFederationContainerName": "mfeui",
-      "federationContainerName": "http://localhost:4201/remoteEntry.mjs",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs",
       "moduleName": "Routes",
       "usedIn": [
         "consume shared module (default) products/Routes@* (strict) (fallback: apps/products/src/app/remote-entry/entry.routes.ts)"

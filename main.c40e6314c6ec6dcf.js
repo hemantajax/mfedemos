@@ -1,1 +1,0 @@
-import*as e from"http://localhost:4201/remoteEntry.mjs";import*as l from"http://localhost:4202/remoteEntry.mjs";(self.webpackChunkmfeui=self.webpackChunkmfeui||[]).push([[792],{1713:s=>{s.exports=e},3541:(s,m,o)=>{Promise.all([o.e(971),o.e(361),o.e(98),o.e(421),o.e(451)]).then(o.bind(o,2451)).catch(t=>console.error(t))},7620:s=>{s.exports=l}},s=>{s(s.s=3541)}]);
