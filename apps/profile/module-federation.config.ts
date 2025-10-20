@@ -3,7 +3,7 @@ import { ModuleFederationConfig } from '@nx/module-federation';
 const config: ModuleFederationConfig = {
   name: 'profile',
   exposes: {
-    './Routes': 'profile/src/app/remote-entry/entry.routes.ts',
+    './Routes': 'apps/profile/src/app/remote-entry/entry.routes.ts',
   },
   // Nx automatically shares all npm packages and workspace libraries as singletons by default
   // No need for explicit shared configuration

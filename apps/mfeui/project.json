@@ -71,7 +71,7 @@
       "options": {
         "port": 4200,
         "publicHost": "http://localhost:4200",
-        "devRemotes": ["products", "cart", "profile"]
+        "devRemotes": ["products", "cart", "profile", "orders"]
       }
     },
     "extract-i18n": {
