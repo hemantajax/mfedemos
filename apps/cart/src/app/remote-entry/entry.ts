@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CounterService } from '@nxmfe/shared/services';
 
@@ -21,60 +21,88 @@ import { CounterService } from '@nxmfe/shared/services';
       <!-- Shared Counter Demo Card -->
       <div class="row mb-4">
         <div class="col-12">
-          <div class="card border-0 shadow-sm bg-gradient-success">
-            <div class="card-body">
+          <div
+            class="card border-success border-2 shadow-sm"
+            style="border-style: dashed;"
+          >
+            <div class="card-body p-4">
               <div class="row align-items-center">
-                <div class="col-md-6">
-                  <h5 class="card-title mb-2">
-                    <i class="bi bi-cloud-arrow-up-fill text-success me-2"></i>
-                    Shared Counter Service Demo
-                  </h5>
-                  <p class="text-muted mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <div class="d-flex align-items-center mb-2">
+                    <div
+                      class="bg-success bg-opacity-10 rounded-circle p-2 me-3"
+                    >
+                      <i
+                        class="bi bi-cloud-arrow-up-fill text-success fs-5"
+                      ></i>
+                    </div>
+                    <h5 class="card-title mb-0 fw-bold">
+                      Shared Counter Service Demo
+                    </h5>
+                  </div>
+                  <p class="text-muted mb-0 ms-5 ps-2 small">
                     This is the same counter from Products MFE. Update it here
                     and see the changes reflected everywhere!
                   </p>
                 </div>
                 <div class="col-md-6">
                   <div
-                    class="d-flex align-items-center justify-content-md-end gap-3"
+                    class="d-flex align-items-center justify-content-md-end gap-2 flex-wrap"
                   >
                     <button
-                      class="btn btn-outline-danger btn-lg"
+                      class="btn btn-outline-danger rounded-pill px-3"
                       (click)="decrementCounter(5)"
+                      title="Decrement by 5"
                     >
-                      <i class="bi bi-dash-lg"></i> 5
+                      <i class="bi bi-dash-lg me-1"></i>
+                      <span class="fw-bold">5</span>
                     </button>
                     <button
-                      class="btn btn-outline-danger"
+                      class="btn btn-outline-danger rounded-circle d-flex align-items-center justify-content-center"
+                      style="width: 40px; height: 40px;"
                       (click)="decrementCounter()"
+                      title="Decrement by 1"
                     >
                       <i class="bi bi-dash"></i>
                     </button>
                     <div
-                      class="bg-white rounded-3 px-4 py-3 shadow-sm border border-2 border-success"
+                      class="bg-light rounded-3 px-4 py-2 border border-2 border-success mx-2"
+                      style="min-width: 80px; text-align: center;"
                     >
-                      <h2 class="mb-0 text-success fw-bold">
+                      <div
+                        class="text-muted small mb-0"
+                        style="font-size: 0.7rem;"
+                      >
+                        Count
+                      </div>
+                      <div class="text-success fw-bold fs-3">
                         {{ counter() }}
-                      </h2>
+                      </div>
                     </div>
                     <button
-                      class="btn btn-outline-success"
+                      class="btn btn-outline-success rounded-circle d-flex align-items-center justify-content-center"
+                      style="width: 40px; height: 40px;"
                       (click)="incrementCounter()"
+                      title="Increment by 1"
                     >
                       <i class="bi bi-plus"></i>
                     </button>
                     <button
-                      class="btn btn-outline-success btn-lg"
+                      class="btn btn-outline-success rounded-pill px-3"
                       (click)="incrementCounter(5)"
+                      title="Increment by 5"
                     >
-                      <i class="bi bi-plus-lg"></i> 5
+                      <i class="bi bi-plus-lg me-1"></i>
+                      <span class="fw-bold">5</span>
                     </button>
+                    <div class="vr mx-1"></div>
                     <button
-                      class="btn btn-outline-secondary"
+                      class="btn btn-outline-secondary rounded-pill px-3"
                       (click)="resetCounter()"
                       title="Reset Counter"
                     >
-                      <i class="bi bi-arrow-counterclockwise"></i>
+                      <i class="bi bi-arrow-counterclockwise me-1"></i>
+                      <span class="small">Reset</span>
                     </button>
                   </div>
                 </div>
@@ -481,7 +509,8 @@ import { CounterService } from '@nxmfe/shared/services';
   `,
 })
 export class RemoteEntry {
-  private counterService = inject(CounterService);
+  protected counterService = inject(CounterService);
+  // Use computed to ensure reactivity across MFE boundaries
   counter = this.counterService.counter;
 
   incrementCounter(amount = 1): void {

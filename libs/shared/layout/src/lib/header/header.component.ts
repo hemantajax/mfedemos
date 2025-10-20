@@ -11,11 +11,11 @@ import { CounterService } from '@nxmfe/shared/services';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  private counterService = inject(CounterService);
+  protected counterService = inject(CounterService);
   isMenuCollapsed = true;
 
-  // Expose the counter signal directly
-  counter = this.counterService.counter;
+  // Use computed to ensure reactivity across MFE boundaries
+  protected counter = this.counterService.counter;
 
   toggleMenu() {
     this.isMenuCollapsed = !this.isMenuCollapsed;
