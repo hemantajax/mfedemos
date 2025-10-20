@@ -894,44 +894,6 @@ const createModuleFederationConfig = options => {
 
 /***/ }),
 
-/***/ 3022:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var moduleMap = {
-	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(3695)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope, remoteEntryInitOptions) => {
-	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
-		shareScope: shareScope,
-		initScope: initScope,
-		remoteEntryInitOptions: remoteEntryInitOptions,
-		shareScopeKey: "default"
-	})
-};
-
-
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
-
-/***/ }),
-
 /***/ 4523:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -967,7 +929,66 @@ function _asyncToGenerator(n) {
 
 /***/ }),
 
-/***/ 4846:
+/***/ 7527:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var moduleMap = {
+	"./Routes": () => {
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(5201)))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope, remoteEntryInitOptions) => {
+	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
+		shareScope: shareScope,
+		initScope: initScope,
+		remoteEntryInitOptions: remoteEntryInitOptions,
+		shareScopeKey: "default"
+	})
+};
+
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
+
+/***/ }),
+
+/***/ 8046:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   _: () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign || function assign(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+
+//# sourceMappingURL=polyfills.esm.js.map
+
+/***/ }),
+
+/***/ 8406:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -2049,7 +2070,7 @@ function getTargetSharedOptions(options) {
 }
 function getBuilderId() {
   //@ts-ignore
-  return  true ? "profile:0.0.0" : 0;
+  return  true ? "admin:0.0.0" : 0;
 }
 
 // Function to match a remote with its name and expose
@@ -4447,7 +4468,7 @@ var index = /*#__PURE__*/Object.freeze({
 // injected by bundler, so it can not use runtime-core stuff
 function utils_esm_getBuilderId() {
   //@ts-ignore
-  return  true ? "profile:0.0.0" : 0;
+  return  true ? "admin:0.0.0" : 0;
 }
 function getGlobalFederationInstance(name, version) {
   const buildId = utils_esm_getBuilderId();
@@ -4974,7 +4995,7 @@ const federation = {
 };
 
 //# sourceMappingURL=index.esm.js.map
-;// ./node_modules/.federation/entry.f5a7c64f0e0a795ee4ded940744b0ff9.js
+;// ./node_modules/.federation/entry.2d9694ea2ab0324abdaccdde508e50a5.js
 
 if (!__webpack_require__.federation.runtime) {
   var prevFederation = __webpack_require__.federation;
@@ -4998,27 +5019,6 @@ if (!__webpack_require__.federation.instance) {
     __webpack_require__.federation.prefetch();
   }
 }
-
-/***/ }),
-
-/***/ 8046:
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   _: () => (/* binding */ _extends)
-/* harmony export */ });
-function _extends() {
-  _extends = Object.assign || function assign(target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-    }
-    return target;
-  };
-  return _extends.apply(this, arguments);
-}
-
-//# sourceMappingURL=polyfills.esm.js.map
 
 /***/ })
 
@@ -5067,7 +5067,7 @@ function _extends() {
 /******/ (() => {
 /******/ 	if(!__webpack_require__.federation){
 /******/ 		__webpack_require__.federation = {
-/******/ 			initOptions: {"name":"profile","remotes":[],"shareStrategy":"version-first"},
+/******/ 			initOptions: {"name":"admin","remotes":[],"shareStrategy":"version-first"},
 /******/ 			chunkMatcher: function(chunkId) {return !/^(361|971|98)$/.test(chunkId)},
 /******/ 			rootOutputDir: "",
 /******/ 			initialConsumes: undefined,
@@ -5118,7 +5118,7 @@ function _extends() {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"796ff18653baaa13","111":"4388b13071766e6f","203":"1790b9bc1c2104a6","295":"099627c39ede5fbe","440":"98be09ac3ca7c3aa","451":"b21af96aee15aae2","567":"09a8b203cf7c6a24","705":"31092d4ebf732912"}[chunkId] + ".js";
+/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"e486da4ebac71dc7","111":"c44edc4fe8d37ff3","203":"a47b02809d56376c","295":"30e6ae6506be8b99","440":"6ec07d88f5ac78f9","451":"2b5ef3e5bcc73437","567":"86ca3de01d9fa770","705":"7b1f197040a81787"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -5139,7 +5139,7 @@ function _extends() {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "profile:";
+/******/ 	var dataWebpackPrefix = "admin:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -5195,7 +5195,7 @@ function _extends() {
 /******/ 
 /******/ /* webpack/runtime/runtimeId */
 /******/ (() => {
-/******/ 	__webpack_require__.j = 138;
+/******/ 	__webpack_require__.j = 884;
 /******/ })();
 /******/ 
 /******/ /* webpack/runtime/sharing */
@@ -5219,7 +5219,7 @@ function _extends() {
 /******/ 		var warn = (msg) => {
 /******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
-/******/ 		var uniqueName = "profile";
+/******/ 		var uniqueName = "admin";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -5451,7 +5451,7 @@ function _extends() {
 /******/ 	__webpack_require__.x = () => {
 /******/ 		if (!hasRun) {
 /******/ 		  hasRun = true;
-/******/ 		  __webpack_require__(4846);
+/******/ 		  __webpack_require__(8406);
 /******/ 		}
 /******/ 		if (typeof prevStartup === 'function') {
 /******/ 		  return prevStartup();
@@ -5469,7 +5469,7 @@ function _extends() {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		138: 0
+/******/ 		884: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -5546,7 +5546,7 @@ function _extends() {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkprofile"] = self["webpackChunkprofile"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkadmin"] = self["webpackChunkadmin"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -5557,7 +5557,7 @@ function _extends() {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(3022);
+/******/ var __webpack_exports__ = __webpack_require__(7527);
 /******/ const __webpack_exports__get = __webpack_exports__.get;
 /******/ const __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };

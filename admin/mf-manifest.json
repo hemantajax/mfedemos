@@ -1,8 +1,8 @@
 {
-  "id": "profile",
-  "name": "profile",
+  "id": "admin",
+  "name": "admin",
   "metaData": {
-    "name": "profile",
+    "name": "admin",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,14 +19,14 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "profile",
+    "globalName": "admin",
     "pluginVersion": "0.18.4",
     "prefetchInterface": false,
     "publicPath": "auto"
   },
   "shared": [
     {
-      "id": "profile:@angular/common/http",
+      "id": "admin:@angular/common/http",
       "name": "@angular/common/http",
       "version": "20.3.5",
       "singleton": true,
@@ -35,7 +35,7 @@
         "js": {
           "async": [],
           "sync": [
-            "111.4388b13071766e6f.js"
+            "111.c44edc4fe8d37ff3.js"
           ]
         },
         "css": {
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "profile:@angular/common",
+      "id": "admin:@angular/common",
       "name": "@angular/common",
       "version": "20.3.5",
       "singleton": true,
@@ -54,7 +54,7 @@
         "js": {
           "async": [],
           "sync": [
-            "705.31092d4ebf732912.js"
+            "705.7b1f197040a81787.js"
           ]
         },
         "css": {
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "profile:@angular/core/primitives/di",
+      "id": "admin:@angular/core/primitives/di",
       "name": "@angular/core/primitives/di",
       "version": "20.3.5",
       "singleton": true,
@@ -73,7 +73,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.796ff18653baaa13.js"
+            "common.e486da4ebac71dc7.js"
           ]
         },
         "css": {
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "profile:@angular/core/primitives/signals",
+      "id": "admin:@angular/core/primitives/signals",
       "name": "@angular/core/primitives/signals",
       "version": "20.3.5",
       "singleton": true,
@@ -92,7 +92,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.796ff18653baaa13.js"
+            "common.e486da4ebac71dc7.js"
           ]
         },
         "css": {
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "profile:@angular/core",
+      "id": "admin:@angular/core",
       "name": "@angular/core",
       "version": "20.3.5",
       "singleton": true,
@@ -111,7 +111,7 @@
         "js": {
           "async": [],
           "sync": [
-            "295.099627c39ede5fbe.js"
+            "295.30e6ae6506be8b99.js"
           ]
         },
         "css": {
@@ -121,7 +121,7 @@
       }
     },
     {
-      "id": "profile:@angular/platform-browser",
+      "id": "admin:@angular/platform-browser",
       "name": "@angular/platform-browser",
       "version": "20.3.5",
       "singleton": true,
@@ -130,7 +130,7 @@
         "js": {
           "async": [],
           "sync": [
-            "567.09a8b203cf7c6a24.js"
+            "567.86ca3de01d9fa770.js"
           ]
         },
         "css": {
@@ -140,7 +140,7 @@
       }
     },
     {
-      "id": "profile:@angular/router",
+      "id": "admin:@angular/router",
       "name": "@angular/router",
       "version": "20.3.5",
       "singleton": true,
@@ -149,7 +149,7 @@
         "js": {
           "async": [],
           "sync": [
-            "451.b21af96aee15aae2.js"
+            "451.2b5ef3e5bcc73437.js"
           ]
         },
         "css": {
@@ -162,7 +162,7 @@
   "remotes": [],
   "exposes": [
     {
-      "id": "profile:Routes",
+      "id": "admin:Routes",
       "name": "Routes",
       "assets": {
         "js": {

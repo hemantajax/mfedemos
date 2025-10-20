@@ -1,8 +1,8 @@
 {
-  "id": "profile",
-  "name": "profile",
+  "id": "notifications",
+  "name": "notifications",
   "metaData": {
-    "name": "profile",
+    "name": "notifications",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,151 +19,182 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "profile",
+    "globalName": "notifications",
     "pluginVersion": "0.18.4",
     "prefetchInterface": false,
     "publicPath": "auto"
   },
   "shared": [
     {
-      "id": "profile:@angular/common/http",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/common/http",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "notifications:@angular/common/http",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "111.4388b13071766e6f.js"
+            "111.749f7d9a895489c3.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/common",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/common",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "notifications:@angular/common",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "705.31092d4ebf732912.js"
+            "705.05f09541cdc3c8f6.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/core/primitives/di",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/core/primitives/di",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "notifications:@angular/core/primitives/di",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "common.796ff18653baaa13.js"
+            "common.cef9329b71a11690.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/core/primitives/signals",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/core/primitives/signals",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "notifications:@angular/core/primitives/signals",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "common.796ff18653baaa13.js"
+            "common.cef9329b71a11690.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/core",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/core",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "notifications:@angular/core",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "295.099627c39ede5fbe.js"
+            "295.f8b66e8704badc89.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/platform-browser",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/platform-browser",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "notifications:@angular/platform-browser",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "567.09a8b203cf7c6a24.js"
+            "567.52db8f7f6a097bf9.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/router",
-      "name": "@angular/router",
-      "version": "20.3.5",
       "singleton": true,
       "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "notifications:@angular/router",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "451.b21af96aee15aae2.js"
+            "451.23b44fcd3f5437cd.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     }
   ],
   "remotes": [],
   "exposes": [
     {
-      "id": "profile:Routes",
+      "path": "./Routes",
+      "id": "notifications:Routes",
       "name": "Routes",
+      "requires": [],
+      "file": "apps/notifications/src/app/remote-entry/entry.routes.ts",
       "assets": {
         "js": {
           "sync": [],
@@ -173,8 +204,7 @@
           "sync": [],
           "async": []
         }
-      },
-      "path": "./Routes"
+      }
     }
   ]
 }

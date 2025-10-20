@@ -1,5 +1,10 @@
 {
   "products": "https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs",
   "cart": "https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs",
-  "profile": "https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs"
+  "profile": "https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs",
+  "orders": "https://hemantajax.github.io/mfedemos/orders/remoteEntry.mjs",
+  "analytics": "https://hemantajax.github.io/mfedemos/analytics/remoteEntry.mjs",
+  "notifications": "https://hemantajax.github.io/mfedemos/notifications/remoteEntry.mjs",
+  "messages": "https://hemantajax.github.io/mfedemos/messages/remoteEntry.mjs",
+  "admin": "https://hemantajax.github.io/mfedemos/admin/remoteEntry.mjs"
 }

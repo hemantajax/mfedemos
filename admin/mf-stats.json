@@ -1,8 +1,8 @@
 {
-  "id": "profile",
-  "name": "profile",
+  "id": "admin",
+  "name": "admin",
   "metaData": {
-    "name": "profile",
+    "name": "admin",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,151 +19,182 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "profile",
+    "globalName": "admin",
     "pluginVersion": "0.18.4",
     "prefetchInterface": false,
     "publicPath": "auto"
   },
   "shared": [
     {
-      "id": "profile:@angular/common/http",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/common/http",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "admin:@angular/common/http",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "111.4388b13071766e6f.js"
+            "111.c44edc4fe8d37ff3.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/common",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/common",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "admin:@angular/common",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "705.31092d4ebf732912.js"
+            "705.7b1f197040a81787.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/core/primitives/di",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/core/primitives/di",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "admin:@angular/core/primitives/di",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "common.796ff18653baaa13.js"
+            "common.e486da4ebac71dc7.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/core/primitives/signals",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/core/primitives/signals",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "admin:@angular/core/primitives/signals",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "common.796ff18653baaa13.js"
+            "common.e486da4ebac71dc7.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/core",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/core",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "admin:@angular/core",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "295.099627c39ede5fbe.js"
+            "295.30e6ae6506be8b99.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/platform-browser",
+      "singleton": true,
+      "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
       "name": "@angular/platform-browser",
       "version": "20.3.5",
-      "singleton": true,
-      "requiredVersion": "~20.3.0",
+      "eager": false,
+      "id": "admin:@angular/platform-browser",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "567.09a8b203cf7c6a24.js"
+            "567.86ca3de01d9fa770.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     },
     {
-      "id": "profile:@angular/router",
-      "name": "@angular/router",
-      "version": "20.3.5",
       "singleton": true,
       "requiredVersion": "~20.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "@angular/router",
+      "version": "20.3.5",
+      "eager": false,
+      "id": "admin:@angular/router",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "451.b21af96aee15aae2.js"
+            "451.2b5ef3e5bcc73437.js"
           ]
         },
         "css": {
           "async": [],
           "sync": []
         }
-      }
+      },
+      "usedIn": []
     }
   ],
   "remotes": [],
   "exposes": [
     {
-      "id": "profile:Routes",
+      "path": "./Routes",
+      "id": "admin:Routes",
       "name": "Routes",
+      "requires": [],
+      "file": "apps/admin/src/app/remote-entry/entry.routes.ts",
       "assets": {
         "js": {
           "sync": [],
@@ -173,8 +204,7 @@
           "sync": [],
           "async": []
         }
-      },
-      "path": "./Routes"
+      }
     }
   ]
 }

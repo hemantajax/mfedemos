@@ -84,7 +84,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.8fd26091dcc65234.js"
+            "common.796ff18653baaa13.js"
           ]
         },
         "css": {
@@ -107,7 +107,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.8fd26091dcc65234.js"
+            "common.796ff18653baaa13.js"
           ]
         },
         "css": {
@@ -194,7 +194,7 @@
       "id": "profile:Routes",
       "name": "Routes",
       "requires": [],
-      "file": "profile/src/app/remote-entry/entry.routes.ts",
+      "file": "apps/profile/src/app/remote-entry/entry.routes.ts",
       "assets": {
         "js": {
           "sync": [],
