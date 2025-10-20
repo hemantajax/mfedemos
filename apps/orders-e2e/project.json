@@ -1,0 +1,9 @@
+{
+  "name": "orders-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/orders-e2e/src",
+  "implicitDependencies": ["orders"],
+  "// targets": "to see all targets run: nx show project orders-e2e --web",
+  "targets": {}
+}

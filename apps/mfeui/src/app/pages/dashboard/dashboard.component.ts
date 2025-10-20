@@ -52,7 +52,7 @@ export class DashboardComponent {
       icon: 'bi-box-seam',
       color: 'warning',
       url: '/orders',
-      status: 'planned',
+      status: 'active',
       remoteEntry: 'http://localhost:4204/remoteEntry.js',
       port: 4204,
     },

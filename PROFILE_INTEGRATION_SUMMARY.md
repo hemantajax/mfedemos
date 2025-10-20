@@ -201,3 +201,4 @@ The profile remote app is now fully integrated into the module federation archit
 
 All changes follow the established patterns from the Products and Cart remote apps, ensuring consistency across the architecture.
 
+

@@ -61,6 +61,10 @@ export const appRoutes: Route[] = [
           import('profile/Routes').then((m) => m.remoteRoutes),
       },
       {
+        path: 'orders',
+        loadChildren: () => import('orders/Routes').then((m) => m.remoteRoutes),
+      },
+      {
         path: '**',
         loadComponent: () =>
           import('@nxmfe/shared/ui-components').then(

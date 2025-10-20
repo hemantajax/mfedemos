@@ -25,6 +25,7 @@
       "@nxmfe/shared/utils": ["libs/shared/utils/src/index.ts"],
       "@nxmfe/styles": ["libs/shared/styles/src/index.ts"],
       "cart/Routes": ["apps/cart/src/app/remote-entry/entry.routes.ts"],
+      "orders/Routes": ["apps/orders/src/app/remote-entry/entry.routes.ts"],
       "products/Routes": ["apps/products/src/app/remote-entry/entry.routes.ts"],
       "profile/Routes": ["profile/src/app/remote-entry/entry.routes.ts"]
     }

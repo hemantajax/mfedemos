@@ -11,6 +11,7 @@ This document outlines the port configuration for the Module Federation architec
 | **mfeui**    | Host   | 4200 | http://localhost:4200 | Main host application   |
 | **products** | Remote | 4201 | http://localhost:4201 | Products micro-frontend |
 | **cart**     | Remote | 4202 | http://localhost:4202 | Cart micro-frontend     |
+| **profile**  | Remote | 4203 | http://localhost:4203 | Profile micro-frontend  |
 
 ## Configuration Files
 
@@ -23,7 +24,8 @@ This document outlines the port configuration for the Module Federation architec
   "executor": "@nx/angular:module-federation-dev-server",
   "options": {
     "port": 4200,
-    "publicHost": "http://localhost:4200"
+    "publicHost": "http://localhost:4200",
+    "devRemotes": ["products", "cart", "profile"]
   }
 }
 ```
@@ -33,9 +35,11 @@ This document outlines the port configuration for the Module Federation architec
 ```typescript
 const config: ModuleFederationConfig = {
   name: 'mfeui',
-  remotes: ['products', 'cart'], // Nx auto-resolves to localhost URLs
+  remotes: ['products', 'cart', 'profile'], // Nx auto-resolves to localhost URLs
 };
 ```
+
+> **Note:** The `devRemotes` option ensures all remotes are served as live Angular dev servers, eliminating the need for static file servers.
 
 ### 2. Products Remote (Remote 1)
 
@@ -87,6 +91,31 @@ const config: ModuleFederationConfig = {
 };
 ```
 
+### 4. Profile Remote (Remote 3)
+
+**File: `profile/project.json`**
+
+```json
+"serve": {
+  "executor": "@nx/angular:dev-server",
+  "options": {
+    "port": 4203,
+    "publicHost": "http://localhost:4203"
+  }
+}
+```
+
+**File: `profile/module-federation.config.ts`**
+
+```typescript
+const config: ModuleFederationConfig = {
+  name: 'profile',
+  exposes: {
+    './Routes': 'profile/src/app/remote-entry/entry.routes.ts',
+  },
+};
+```
+
 ## How to Run
 
 ### Option 1: Run All Applications Together (Recommended)
@@ -102,8 +131,9 @@ This command runs:
 - Host (mfeui) on port 4200
 - Products on port 4201
 - Cart on port 4202
+- Profile on port 4203
 
-All three applications will start simultaneously and are ready for development.
+All four applications will start simultaneously and are ready for development.
 
 ### Option 2: Run Applications Individually
 
@@ -124,6 +154,11 @@ nx serve products
 npm run serve:cart
 # or
 nx serve cart
+
+# Terminal 4 - Start profile remote
+npm run serve:profile
+# or
+nx serve profile
 ```
 
 ### Option 3: Use Nx Commands Directly
@@ -135,9 +170,10 @@ nx serve mfeui
 # Start remotes
 nx serve products
 nx serve cart
+nx serve profile
 
 # Or run all in parallel
-nx run-many --target=serve --projects=mfeui,products,cart --parallel=3
+nx run-many --target=serve --projects=mfeui,products,cart,profile --parallel=4
 ```
 
 ## Available NPM Scripts
@@ -181,12 +217,13 @@ nx run-many --target=serve --projects=mfeui,products,cart --parallel=3
 In development mode, Nx automatically resolves the remote URLs based on the port configuration in `project.json`:
 
 1. **Host (mfeui)** runs on port 4200
-2. When you navigate to routes like `/products` or `/cart`, the host loads the remote modules from:
+2. When you navigate to routes like `/products`, `/cart`, or `/profile`, the host loads the remote modules from:
 
    - Products: `http://localhost:4201/remoteEntry.mjs`
    - Cart: `http://localhost:4202/remoteEntry.mjs`
+   - Profile: `http://localhost:4203/remoteEntry.mjs`
 
-3. Nx handles the URL resolution automatically, so you only need to specify `remotes: ['products', 'cart']`
+3. Nx handles the URL resolution automatically with the `devRemotes` option, serving all remotes as live Angular dev servers
 
 ### Production Mode
 
@@ -224,6 +261,7 @@ Available on:
   http://localhost:4200
   http://localhost:4201
   http://localhost:4202
+  http://localhost:4203
 ```
 
 ### 2. Access the Host Application
@@ -242,6 +280,7 @@ These routes should display the header with navigation:
 - `http://localhost:4200/dashboard` - Dashboard page
 - `http://localhost:4200/products` - Products MFE (loaded from port 4201)
 - `http://localhost:4200/cart` - Cart MFE (loaded from port 4202)
+- `http://localhost:4200/profile` - Profile MFE (loaded from port 4203)
 - `http://localhost:4200/about` - About page
 - `http://localhost:4200/contact` - Contact page
 
@@ -258,6 +297,7 @@ You can also access remotes directly (useful for debugging):
 
 - `http://localhost:4201` - Products standalone
 - `http://localhost:4202` - Cart standalone
+- `http://localhost:4203` - Profile standalone
 
 ## Troubleshooting
 
@@ -278,6 +318,7 @@ npm run serve:all
 lsof -ti:4200 | xargs kill -9
 lsof -ti:4201 | xargs kill -9
 lsof -ti:4202 | xargs kill -9
+lsof -ti:4203 | xargs kill -9
 
 # On Windows
 netstat -ano | findstr :4200
@@ -365,7 +406,8 @@ For faster builds during development, the following optimizations are disabled:
 ✅ **Host (mfeui)**: Port 4200 - Main application with routing and layout  
 ✅ **Products Remote**: Port 4201 - Products micro-frontend  
 ✅ **Cart Remote**: Port 4202 - Cart micro-frontend  
+✅ **Profile Remote**: Port 4203 - Profile micro-frontend  
 ✅ **Quick Start**: `npm run serve:all`  
 ✅ **URL**: http://localhost:4200
 
-The port configuration is optimized for local development with Module Federation, providing a seamless experience for developing and testing micro-frontend applications.
+The port configuration uses the `devRemotes` option to serve all remotes as live Angular dev servers with Hot Module Replacement (HMR), providing a seamless development experience for micro-frontend applications without any static file servers.
