@@ -63,7 +63,7 @@ export class DashboardComponent {
       icon: 'bi-graph-up-arrow',
       color: 'danger',
       url: '/analytics',
-      status: 'planned',
+      status: 'active',
       remoteEntry: 'http://localhost:4205/remoteEntry.js',
       port: 4205,
     },

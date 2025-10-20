@@ -20,6 +20,10 @@ const config: ModuleFederationConfig = {
       'https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs',
     ],
     ['orders', 'https://hemantajax.github.io/mfedemos/orders/remoteEntry.mjs'],
+    [
+      'analytics',
+      'https://hemantajax.github.io/mfedemos/analytics/remoteEntry.mjs',
+    ],
   ],
 };
 
