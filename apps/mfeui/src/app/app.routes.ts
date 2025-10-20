@@ -3,6 +3,10 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 export const appRoutes: Route[] = [
+  {
+    path: 'messages',
+    loadChildren: () => import('messages/Routes').then((m) => m!.remoteRoutes),
+  },
   // Routes WITHOUT layout (full page)
   {
     path: 'login',

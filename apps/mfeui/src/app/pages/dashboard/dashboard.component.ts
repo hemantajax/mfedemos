@@ -85,7 +85,7 @@ export class DashboardComponent {
       icon: 'bi-chat-dots-fill',
       color: 'primary',
       url: '/messages',
-      status: 'planned',
+      status: 'active',
       remoteEntry: 'http://localhost:4207/remoteEntry.js',
       port: 4207,
     },

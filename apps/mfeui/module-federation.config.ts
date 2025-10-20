@@ -24,6 +24,7 @@ const config: ModuleFederationConfig = {
     'orders',
     'analytics',
     'notifications',
+    'messages',
   ],
 };
 

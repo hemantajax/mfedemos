@@ -28,6 +28,10 @@ const config: ModuleFederationConfig = {
       'notifications',
       'https://hemantajax.github.io/mfedemos/notifications/remoteEntry.mjs',
     ],
+    [
+      'messages',
+      'https://hemantajax.github.io/mfedemos/messages/remoteEntry.mjs',
+    ],
   ],
 };
 
