@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CounterService } from '@nxmfe/shared/services';
+import { Observable } from 'rxjs';
 
 @Component({
   imports: [CommonModule],
@@ -14,6 +16,60 @@ import { CommonModule } from '@angular/common';
           <p class="lead text-muted">
             Manage and monitor your product inventory and performance
           </p>
+        </div>
+      </div>
+
+      <!-- Shared Counter Demo Card -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card border-0 shadow-sm bg-gradient-primary">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-md-6">
+                  <h5 class="card-title mb-2">
+                    <i class="bi bi-share-fill text-primary me-2"></i>
+                    Shared Counter Service Demo
+                  </h5>
+                  <p class="text-muted mb-3">
+                    This counter is shared across all MFEs. Changes here will be
+                    reflected in the header and Cart MFE in real-time!
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="d-flex align-items-center justify-content-md-end gap-3"
+                  >
+                    <button
+                      class="btn btn-outline-danger btn-lg"
+                      (click)="decrementCounter()"
+                    >
+                      <i class="bi bi-dash-lg"></i>
+                    </button>
+                    <div
+                      class="bg-white rounded-3 px-4 py-3 shadow-sm border border-2 border-primary"
+                    >
+                      <h2 class="mb-0 text-primary fw-bold">
+                        {{ counter$ | async }}
+                      </h2>
+                    </div>
+                    <button
+                      class="btn btn-outline-success btn-lg"
+                      (click)="incrementCounter()"
+                    >
+                      <i class="bi bi-plus-lg"></i>
+                    </button>
+                    <button
+                      class="btn btn-outline-secondary"
+                      (click)="resetCounter()"
+                      title="Reset Counter"
+                    >
+                      <i class="bi bi-arrow-counterclockwise"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -294,6 +350,25 @@ import { CommonModule } from '@angular/common';
     :host {
       display: block;
     }
+
+    .bg-gradient-primary {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
   `,
 })
-export class RemoteEntry {}
+export class RemoteEntry {
+  private counterService = inject(CounterService);
+  counter$: Observable<number> = this.counterService.counter$;
+
+  incrementCounter(): void {
+    this.counterService.increment();
+  }
+
+  decrementCounter(): void {
+    this.counterService.decrement();
+  }
+
+  resetCounter(): void {
+    this.counterService.reset();
+  }
+}
