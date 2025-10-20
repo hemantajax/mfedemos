@@ -6,6 +6,20 @@ const path = require('path');
 const GITHUB_PAGES_URL = 'https://hemantajax.github.io/mfedemos/';
 
 /**
+ * Port to remote name mapping
+ */
+const PORT_MAPPING = {
+  4201: 'products',
+  4202: 'cart',
+  4203: 'profile',
+  4204: 'orders',
+  4205: 'analytics',
+  4206: 'notifications',
+  4207: 'messages',
+  4208: 'admin',
+};
+
+/**
  * Fix mf-manifest.json to use GitHub Pages URLs for production deployment
  */
 function fixManifest(manifestPath) {
@@ -21,21 +35,14 @@ function fixManifest(manifestPath) {
       const originalUrl = remote.federationContainerName;
 
       // Replace localhost URLs with GitHub Pages URLs
-      if (originalUrl.includes('localhost:4201')) {
-        remote.federationContainerName = `${GITHUB_PAGES_URL}products/remoteEntry.mjs`;
-        console.log(
-          `✅ Fixed products remote: ${originalUrl} -> ${remote.federationContainerName}`
-        );
-      } else if (originalUrl.includes('localhost:4202')) {
-        remote.federationContainerName = `${GITHUB_PAGES_URL}cart/remoteEntry.mjs`;
-        console.log(
-          `✅ Fixed cart remote: ${originalUrl} -> ${remote.federationContainerName}`
-        );
-      } else if (originalUrl.includes('localhost:4203')) {
-        remote.federationContainerName = `${GITHUB_PAGES_URL}profile/remoteEntry.mjs`;
-        console.log(
-          `✅ Fixed profile remote: ${originalUrl} -> ${remote.federationContainerName}`
-        );
+      for (const [port, remoteName] of Object.entries(PORT_MAPPING)) {
+        if (originalUrl.includes(`localhost:${port}`)) {
+          remote.federationContainerName = `${GITHUB_PAGES_URL}${remoteName}/remoteEntry.mjs`;
+          console.log(
+            `✅ Fixed ${remoteName} remote (port ${port}): ${originalUrl} -> ${remote.federationContainerName}`
+          );
+          break;
+        }
       }
 
       return remote;

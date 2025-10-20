@@ -23,7 +23,7 @@ nx serve mfeui
 
 👉 **This is the URL to use**: `http://localhost:4200`
 
-> 💡 **Note**: You'll see messages about ports 4201-4206 - these are remote MFEs running in the background. **Ignore them** and always use port 4200.
+> 💡 **Note**: You'll see messages about ports 4201-4208 - these are remote MFEs running in the background. **Ignore them** and always use port 4200.
 
 This will:
 
@@ -35,6 +35,8 @@ This will:
   - orders → `http://localhost:4204` (background)
   - analytics → `http://localhost:4205` (background)
   - notifications → `http://localhost:4206` (background)
+  - messages → `http://localhost:4207` (background)
+  - admin → `http://localhost:4208` (background)
 
 ### 🌐 Access the Application
 
@@ -47,7 +49,9 @@ This will:
 - Profile: `http://localhost:4200/profile`
 - Orders: `http://localhost:4200/orders`
 - Analytics: `http://localhost:4200/analytics`
-- Notifications: `http://localhost:4200/notifications` ✨ NEW
+- Notifications: `http://localhost:4200/notifications`
+- Messages: `http://localhost:4200/messages`
+- Admin: `http://localhost:4200/admin`
 
 ## Port Assignment
 
@@ -60,10 +64,12 @@ This will:
 | orders        | 4204 | Remote | ❌ Don't access directly |
 | analytics     | 4205 | Remote | ❌ Don't access directly |
 | notifications | 4206 | Remote | ❌ Don't access directly |
+| messages      | 4207 | Remote | ❌ Don't access directly |
+| admin         | 4208 | Remote | ❌ Don't access directly |
 
 ## Important Notes
 
-1. **Remote MFE ports (4201-4206)** are for Module Federation communication only
+1. **Remote MFE ports (4201-4208)** are for Module Federation communication only
 2. **Always access through host port 4200** - the host loads remotes automatically
 3. Accessing remotes directly (e.g., `localhost:4205`) bypasses the layout and routing
 4. The host provides the navigation, layout, and routing for all MFEs
@@ -80,7 +86,7 @@ nx serve mfeui
 ### Start with Specific Remotes Only
 
 ```bash
-nx serve mfeui --devRemotes=products,analytics,notifications
+nx serve mfeui --devRemotes=products,analytics,notifications,messages,admin
 ```
 
 ### Build for Production
