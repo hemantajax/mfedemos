@@ -4,6 +4,10 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 
 export const appRoutes: Route[] = [
   {
+    path: 'admin',
+    loadChildren: () => import('admin/Routes').then((m) => m!.remoteRoutes),
+  },
+  {
     path: 'messages',
     loadChildren: () => import('messages/Routes').then((m) => m!.remoteRoutes),
   },

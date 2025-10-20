@@ -1,29 +1,30 @@
 {
-  "name": "mfeui",
+  "name": "admin",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/mfeui/src",
+  "sourceRoot": "apps/admin/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/mfeui",
-        "index": "apps/mfeui/src/index.html",
-        "main": "apps/mfeui/src/main.ts",
-        "tsConfig": "apps/mfeui/tsconfig.app.json",
+        "outputPath": "dist/apps/admin",
+        "index": "apps/admin/src/index.html",
+        "main": "apps/admin/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/admin/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/mfeui/public"
+            "input": "apps/admin/public"
           }
         ],
-        "styles": ["apps/mfeui/src/styles.scss"],
+        "styles": ["apps/admin/src/styles.scss"],
         "customWebpackConfig": {
-          "path": "apps/mfeui/webpack.config.ts"
+          "path": "apps/admin/webpack.config.ts"
         }
       },
       "configurations": {
@@ -42,7 +43,7 @@
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/mfeui/webpack.prod.config.ts"
+            "path": "apps/admin/webpack.prod.config.ts"
           }
         },
         "development": {
@@ -58,35 +59,26 @@
     },
     "serve": {
       "continuous": true,
-      "executor": "@nx/angular:module-federation-dev-server",
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "port": 4208,
+        "publicHost": "http://localhost:4208"
+      },
       "configurations": {
         "production": {
-          "buildTarget": "mfeui:build:production"
+          "buildTarget": "admin:build:production"
         },
         "development": {
-          "buildTarget": "mfeui:build:development"
+          "buildTarget": "admin:build:development"
         }
       },
       "defaultConfiguration": "development",
-      "options": {
-        "port": 4200,
-        "publicHost": "http://localhost:4200",
-        "devRemotes": [
-          "products",
-          "cart",
-          "profile",
-          "orders",
-          "analytics",
-          "notifications",
-          "messages",
-          "admin"
-        ]
-      }
+      "dependsOn": ["mfeui:serve"]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "mfeui:build"
+        "buildTarget": "admin:build"
       }
     },
     "lint": {
@@ -96,17 +88,26 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/mfeui/jest.config.ts",
-        "tsConfig": "apps/mfeui/tsconfig.spec.json"
+        "jestConfig": "apps/admin/jest.config.ts",
+        "tsConfig": "apps/admin/tsconfig.spec.json"
       }
     },
     "serve-static": {
       "continuous": true,
       "executor": "@nx/web:file-server",
+      "defaultConfiguration": "production",
       "options": {
-        "buildTarget": "mfeui:build",
-        "port": 4200,
-        "spa": true
+        "buildTarget": "admin:build",
+        "port": 4208,
+        "watch": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "admin:build:development"
+        },
+        "production": {
+          "buildTarget": "admin:build:production"
+        }
       }
     }
   }

@@ -25,6 +25,7 @@ const config: ModuleFederationConfig = {
     'analytics',
     'notifications',
     'messages',
+    'admin',
   ],
 };
 

@@ -32,6 +32,7 @@ const config: ModuleFederationConfig = {
       'messages',
       'https://hemantajax.github.io/mfedemos/messages/remoteEntry.mjs',
     ],
+    ['admin', 'https://hemantajax.github.io/mfedemos/admin/remoteEntry.mjs'],
   ],
 };
 
