@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CounterService } from '@nxmfe/shared/services';
-import { Observable } from 'rxjs';
 
 @Component({
   imports: [CommonModule],
@@ -55,7 +54,7 @@ import { Observable } from 'rxjs';
                       class="bg-white rounded-3 px-4 py-3 shadow-sm border border-2 border-success"
                     >
                       <h2 class="mb-0 text-success fw-bold">
-                        {{ counter$ | async }}
+                        {{ counter() }}
                       </h2>
                     </div>
                     <button
@@ -483,7 +482,7 @@ import { Observable } from 'rxjs';
 })
 export class RemoteEntry {
   private counterService = inject(CounterService);
-  counter$: Observable<number> = this.counterService.counter$;
+  counter = this.counterService.counter;
 
   incrementCounter(amount = 1): void {
     this.counterService.increment(amount);

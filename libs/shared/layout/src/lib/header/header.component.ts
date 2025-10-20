@@ -1,20 +1,21 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { CounterService } from '@nxmfe/shared/services';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
   private counterService = inject(CounterService);
   isMenuCollapsed = true;
-  counter$: Observable<number> = this.counterService.counter$;
+
+  // Expose the counter signal directly
+  counter = this.counterService.counter;
 
   toggleMenu() {
     this.isMenuCollapsed = !this.isMenuCollapsed;

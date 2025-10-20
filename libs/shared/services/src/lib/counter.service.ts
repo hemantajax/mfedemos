@@ -1,48 +1,49 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
 
 /**
  * Shared Counter Service
  * Demonstrates state sharing across multiple micro frontends
  * This service maintains a global counter that can be accessed and modified from any MFE
+ * Uses Angular signals for reactive state management
  */
 @Injectable({
   providedIn: 'root',
 })
 export class CounterService {
-  private counterSubject = new BehaviorSubject<number>(0);
-  public counter$: Observable<number> = this.counterSubject.asObservable();
+  // Signal-based counter state
+  private counterSignal = signal<number>(0);
+
+  // Read-only signal for external use
+  readonly counter = this.counterSignal.asReadonly();
 
   /**
    * Get the current counter value
    */
   get currentValue(): number {
-    return this.counterSubject.value;
+    return this.counterSignal();
   }
 
   /**
    * Increment the counter by a specified amount
    * @param amount - The amount to increment (default: 1)
    */
-  increment(amount: number = 1): void {
-    const newValue = this.counterSubject.value + amount;
-    this.counterSubject.next(newValue);
+  increment(amount = 1): void {
+    this.counterSignal.update((value) => value + amount);
   }
 
   /**
    * Decrement the counter by a specified amount
    * @param amount - The amount to decrement (default: 1)
    */
-  decrement(amount: number = 1): void {
-    const newValue = this.counterSubject.value - amount;
-    this.counterSubject.next(newValue);
+  decrement(amount = 1): void {
+    this.counterSignal.update((value) => value - amount);
   }
 
   /**
    * Reset the counter to zero
    */
   reset(): void {
-    this.counterSubject.next(0);
+    this.counterSignal.set(0);
   }
 
   /**
@@ -50,6 +51,6 @@ export class CounterService {
    * @param value - The value to set
    */
   setValue(value: number): void {
-    this.counterSubject.next(value);
+    this.counterSignal.set(value);
   }
 }

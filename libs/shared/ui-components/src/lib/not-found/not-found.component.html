@@ -40,7 +40,8 @@
           <h5 class="text-muted">Or try one of these helpful links:</h5>
         </div>
 
-        <div class="col-md-4" *ngFor="let suggestion of suggestions">
+        @for (suggestion of suggestions; track suggestion.link) {
+        <div class="col-md-4">
           <a [routerLink]="suggestion.link" class="text-decoration-none">
             <div class="card border-0 shadow-sm h-100 suggestion-card">
               <div class="card-body text-center p-4">
@@ -57,6 +58,7 @@
             </div>
           </a>
         </div>
+        }
       </div>
 
       <!-- Additional Help -->

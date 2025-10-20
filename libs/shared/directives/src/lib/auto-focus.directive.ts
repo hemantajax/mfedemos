@@ -1,4 +1,4 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { Directive, ElementRef, OnInit, inject } from '@angular/core';
 
 /**
  * Automatically focuses an element when it is rendered
@@ -6,10 +6,9 @@ import { Directive, ElementRef, OnInit } from '@angular/core';
  */
 @Directive({
   selector: '[appAutoFocus]',
-  standalone: true,
 })
 export class AutoFocusDirective implements OnInit {
-  constructor(private elementRef: ElementRef) {}
+  private elementRef = inject(ElementRef);
 
   ngOnInit(): void {
     setTimeout(() => {

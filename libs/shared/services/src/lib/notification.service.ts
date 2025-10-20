@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
 
 export interface Notification {
   type: 'success' | 'error' | 'warning' | 'info';
@@ -9,13 +8,17 @@ export interface Notification {
 
 /**
  * Service for managing application notifications
+ * Uses Angular signals for reactive state management
  */
 @Injectable({
   providedIn: 'root',
 })
 export class NotificationService {
-  private notificationSubject = new Subject<Notification>();
-  public notification$ = this.notificationSubject.asObservable();
+  // Signal-based notification state
+  private notificationSignal = signal<Notification | null>(null);
+
+  // Read-only signal for external use
+  readonly notification = this.notificationSignal.asReadonly();
 
   /**
    * Show a success notification
@@ -46,9 +49,21 @@ export class NotificationService {
   }
 
   /**
+   * Clear the current notification
+   */
+  clear(): void {
+    this.notificationSignal.set(null);
+  }
+
+  /**
    * Show a notification with custom options
    */
   private show(notification: Notification): void {
-    this.notificationSubject.next(notification);
+    this.notificationSignal.set(notification);
+
+    // Auto-clear notification after duration
+    if (notification.duration) {
+      setTimeout(() => this.clear(), notification.duration);
+    }
   }
 }

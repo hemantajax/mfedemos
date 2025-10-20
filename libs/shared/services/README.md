@@ -28,18 +28,17 @@ import { CounterService } from '@nxmfe/shared/services';
 ```typescript
 import { Component, inject } from '@angular/core';
 import { CounterService } from '@nxmfe/shared/services';
-import { Observable } from 'rxjs';
 
 export class MyComponent {
   private counterService = inject(CounterService);
-  counter$: Observable<number> = this.counterService.counter$;
+  counter = this.counterService.counter;
 }
 ```
 
 **Display in template:**
 
 ```html
-<div>Counter: {{ counter$ | async }}</div>
+<div>Counter: {{ counter() }}</div>
 ```
 
 **Available methods:**
