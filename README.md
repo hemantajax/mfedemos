@@ -29,12 +29,12 @@ A **prominent banner** will automatically appear when ready:
 
 ## 📚 Documentation
 
-- **[QUICK_ACCESS.md](./QUICK_ACCESS.md)** - Quick reference for starting and accessing the app
-- **[PORT_GUIDE.md](./PORT_GUIDE.md)** - Port configuration explained
-- **[DEVREMOTES_GUIDE.md](./DEVREMOTES_GUIDE.md)** - How to add new remote MFEs
-- **[LIBRARIES_ARCHITECTURE.md](./LIBRARIES_ARCHITECTURE.md)** - Shared libraries structure
-- **[NPM_SCRIPTS_REFERENCE.md](./NPM_SCRIPTS_REFERENCE.md)** - All npm commands
-- **[DOCUMENTATION_INDEX.md](./DOCUMENTATION_INDEX.md)** - Complete documentation index
+- **[QUICK_ACCESS.md](./docs/QUICK_ACCESS.md)** - Quick reference for starting and accessing the app
+- **[PORT_GUIDE.md](./docs/PORT_GUIDE.md)** - Port configuration explained
+- **[DEVREMOTES_GUIDE.md](./docs/DEVREMOTES_GUIDE.md)** - How to add new remote MFEs
+- **[LIBRARIES_ARCHITECTURE.md](./docs/LIBRARIES_ARCHITECTURE.md)** - Shared libraries structure
+- **[NPM_SCRIPTS_REFERENCE.md](./docs/NPM_SCRIPTS_REFERENCE.md)** - All npm commands
+- **[DOCUMENTATION_INDEX.md](./docs/DOCUMENTATION_INDEX.md)** - Complete documentation index
 
 ---
 
@@ -160,9 +160,10 @@ nxmfe/
 
 ### 🏗️ Architecture
 
-- **[LIBRARIES_ARCHITECTURE.md](./LIBRARIES_ARCHITECTURE.md)** - Complete library architecture guide
-- **[SHARED_LIBRARIES_README.md](./SHARED_LIBRARIES_README.md)** - Quick reference for using libraries
-- **[mfe.md](./mfe.md)** - Micro-frontend architecture guide
+- **[LIBRARIES_ARCHITECTURE.md](./docs/LIBRARIES_ARCHITECTURE.md)** - Complete library architecture guide
+- **[SHARED_LIBRARIES_README.md](./docs/SHARED_LIBRARIES_README.md)** - Quick reference for using libraries
+- **[mfe.md](./docs/mfe.md)** - Micro-frontend architecture guide
+- **[SHARED_SERVICES_GUIDE.md](./docs/SHARED_SERVICES_GUIDE.md)** - Shared services and MFE communication
 
 ### ⚡ Zoneless Configuration
 
