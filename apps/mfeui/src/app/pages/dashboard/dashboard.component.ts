@@ -74,7 +74,7 @@ export class DashboardComponent {
       icon: 'bi-bell-fill',
       color: 'secondary',
       url: '/notifications',
-      status: 'planned',
+      status: 'active',
       remoteEntry: 'http://localhost:4206/remoteEntry.js',
       port: 4206,
     },

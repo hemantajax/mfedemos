@@ -70,6 +70,11 @@ export const appRoutes: Route[] = [
           import('analytics/Routes').then((m) => m.remoteRoutes),
       },
       {
+        path: 'notifications',
+        loadChildren: () =>
+          import('notifications/Routes').then((m) => m.remoteRoutes),
+      },
+      {
         path: '**',
         loadComponent: () =>
           import('@nxmfe/shared/ui-components').then(

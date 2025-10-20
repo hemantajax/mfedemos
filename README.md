@@ -2,11 +2,39 @@
 
 A modern, scalable Angular 18 micro-frontend application built with Nx monorepo, Module Federation, Bootstrap 5, and **zoneless change detection** for optimal performance.
 
+## 🚀 Quick Start
+
+```bash
+npm start
+```
+
+A **prominent banner** will automatically appear when ready:
+
+```
+╔═════════════════════════════════════════════════════════════════╗
+║  ✅ ALL SERVICES READY!                                         ║
+║  Open your browser: 👉  http://localhost:4200  👈              ║
+╚═════════════════════════════════════════════════════════════════╝
+```
+
+**Then open**: `http://localhost:4200`
+
+> 💡 **Pro Tip**: The smart wrapper script detects when all services are ready and displays a prominent banner with the correct port. No more confusion!
+
 ## 🌐 Live Demo
 
 **🔗 [View Live Application](https://hemantajax.github.io/mfedemos/)**
 
 > Deployed automatically to GitHub Pages via GitHub Actions
+
+## 📚 Documentation
+
+- **[QUICK_ACCESS.md](./QUICK_ACCESS.md)** - Quick reference for starting and accessing the app
+- **[PORT_GUIDE.md](./PORT_GUIDE.md)** - Port configuration explained
+- **[DEVREMOTES_GUIDE.md](./DEVREMOTES_GUIDE.md)** - How to add new remote MFEs
+- **[LIBRARIES_ARCHITECTURE.md](./LIBRARIES_ARCHITECTURE.md)** - Shared libraries structure
+- **[NPM_SCRIPTS_REFERENCE.md](./NPM_SCRIPTS_REFERENCE.md)** - All npm commands
+- **[DOCUMENTATION_INDEX.md](./DOCUMENTATION_INDEX.md)** - Complete documentation index
 
 ---
 

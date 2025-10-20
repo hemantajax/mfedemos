@@ -10,13 +10,21 @@ const config: ModuleFederationConfig = {
    * - profile: http://localhost:4203
    * - orders: http://localhost:4204
    * - analytics: http://localhost:4205
+   * - notifications: http://localhost:4206
    *
    * For production, use module-federation.config.prod.ts
    *
    * Nx automatically shares all npm packages and workspace libraries as singletons by default
    * No need for explicit shared configuration
    */
-  remotes: ['products', 'cart', 'profile', 'orders', 'analytics'],
+  remotes: [
+    'products',
+    'cart',
+    'profile',
+    'orders',
+    'analytics',
+    'notifications',
+  ],
 };
 
 /**
