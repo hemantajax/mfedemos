@@ -73,7 +73,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.a2aa236293cdc95a.js"
+            "common.cece6035bdf90ed5.js"
           ]
         },
         "css": {
@@ -92,7 +92,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.a2aa236293cdc95a.js"
+            "common.cece6035bdf90ed5.js"
           ]
         },
         "css": {
@@ -150,6 +150,44 @@
           "async": [],
           "sync": [
             "451.e3ca363e69cc35c3.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "cart:@nxmfe/shared/services",
+      "name": "@nxmfe/shared/services",
+      "version": "0.0.1",
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.cece6035bdf90ed5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "cart:tslib",
+      "name": "tslib",
+      "version": "2.8.1",
+      "singleton": true,
+      "requiredVersion": "^2.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "635.d3f966c3a62519c7.js"
           ]
         },
         "css": {

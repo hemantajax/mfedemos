@@ -1,4 +1,5 @@
 {
   "products": "https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs",
-  "cart": "https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs"
+  "cart": "https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs",
+  "profile": "https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs"
 }

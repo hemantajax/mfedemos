@@ -84,7 +84,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.0cf93698a8979800.js"
+            "common.61592a593b737e79.js"
           ]
         },
         "css": {
@@ -107,7 +107,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.0cf93698a8979800.js"
+            "common.61592a593b737e79.js"
           ]
         },
         "css": {
@@ -214,6 +214,50 @@
       "requiredVersion": "0.0.1",
       "shareScope": "default",
       "eager": false,
+      "name": "@nxmfe/shared/layout",
+      "version": "0.0.1",
+      "id": "mfeui:@nxmfe/shared/layout",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.61592a593b737e79.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@nxmfe/shared/services",
+      "version": "0.0.1",
+      "id": "mfeui:@nxmfe/shared/services",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.61592a593b737e79.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "shareScope": "default",
+      "eager": false,
       "name": "@nxmfe/shared/ui-components",
       "version": "0.0.1",
       "id": "mfeui:@nxmfe/shared/ui-components",
@@ -221,7 +265,30 @@
         "js": {
           "async": [],
           "sync": [
-            "common.0cf93698a8979800.js"
+            "common.61592a593b737e79.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^2.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "tslib",
+      "version": "2.8.1",
+      "eager": false,
+      "id": "mfeui:tslib",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "635.b7e1687f62c20abd.js"
           ]
         },
         "css": {
@@ -233,6 +300,26 @@
     }
   ],
   "remotes": [
+    {
+      "alias": "admin",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/admin/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) admin/Routes@* (strict) (fallback: apps/admin/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
+    {
+      "alias": "messages",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/messages/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) messages/Routes@* (strict) (fallback: apps/messages/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
     {
       "alias": "cart",
       "consumingFederationContainerName": "mfeui",
@@ -250,6 +337,46 @@
       "moduleName": "Routes",
       "usedIn": [
         "consume shared module (default) products/Routes@* (strict) (fallback: apps/products/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
+    {
+      "alias": "profile",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) profile/Routes@* (strict) (fallback: apps/profile/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
+    {
+      "alias": "orders",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/orders/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) orders/Routes@* (strict) (fallback: apps/orders/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
+    {
+      "alias": "analytics",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/analytics/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) analytics/Routes@* (strict) (fallback: apps/analytics/src/app/remote-entry/entry.routes.ts)"
+      ],
+      "version": "*"
+    },
+    {
+      "alias": "notifications",
+      "consumingFederationContainerName": "mfeui",
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/notifications/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "usedIn": [
+        "consume shared module (default) notifications/Routes@* (strict) (fallback: apps/notifications/src/app/remote-entry/entry.routes.ts)"
       ],
       "version": "*"
     }

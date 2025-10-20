@@ -73,7 +73,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.0cf93698a8979800.js"
+            "common.61592a593b737e79.js"
           ]
         },
         "css": {
@@ -92,7 +92,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.0cf93698a8979800.js"
+            "common.61592a593b737e79.js"
           ]
         },
         "css": {
@@ -178,6 +178,44 @@
       }
     },
     {
+      "id": "mfeui:@nxmfe/shared/layout",
+      "name": "@nxmfe/shared/layout",
+      "version": "0.0.1",
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.61592a593b737e79.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:@nxmfe/shared/services",
+      "name": "@nxmfe/shared/services",
+      "version": "0.0.1",
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.61592a593b737e79.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
       "id": "mfeui:@nxmfe/shared/ui-components",
       "name": "@nxmfe/shared/ui-components",
       "version": "0.0.1",
@@ -187,7 +225,26 @@
         "js": {
           "async": [],
           "sync": [
-            "common.0cf93698a8979800.js"
+            "common.61592a593b737e79.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "mfeui:tslib",
+      "name": "tslib",
+      "version": "2.8.1",
+      "singleton": true,
+      "requiredVersion": "^2.3.0",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "635.b7e1687f62c20abd.js"
           ]
         },
         "css": {
@@ -199,6 +256,18 @@
   ],
   "remotes": [
     {
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/admin/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "admin",
+      "entry": "*"
+    },
+    {
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/messages/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "messages",
+      "entry": "*"
+    },
+    {
       "federationContainerName": "https://hemantajax.github.io/mfedemos/cart/remoteEntry.mjs",
       "moduleName": "Routes",
       "alias": "cart",
@@ -208,6 +277,30 @@
       "federationContainerName": "https://hemantajax.github.io/mfedemos/products/remoteEntry.mjs",
       "moduleName": "Routes",
       "alias": "products",
+      "entry": "*"
+    },
+    {
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/profile/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "profile",
+      "entry": "*"
+    },
+    {
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/orders/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "orders",
+      "entry": "*"
+    },
+    {
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/analytics/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "analytics",
+      "entry": "*"
+    },
+    {
+      "federationContainerName": "https://hemantajax.github.io/mfedemos/notifications/remoteEntry.mjs",
+      "moduleName": "Routes",
+      "alias": "notifications",
       "entry": "*"
     }
   ],

@@ -274,6 +274,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+@nxmfe/shared/layout
+
+@nxmfe/shared/services
+
 @nxmfe/shared/ui-components
 
 rxjs

@@ -1,8 +1,8 @@
 {
-  "id": "cart",
-  "name": "cart",
+  "id": "profile",
+  "name": "profile",
   "metaData": {
-    "name": "cart",
+    "name": "profile",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,7 +19,7 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "cart",
+    "globalName": "profile",
     "pluginVersion": "0.18.4",
     "prefetchInterface": false,
     "publicPath": "auto"
@@ -33,12 +33,12 @@
       "name": "@angular/common/http",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/common/http",
+      "id": "profile:@angular/common/http",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "111.4d272399c83a3d80.js"
+            "111.4388b13071766e6f.js"
           ]
         },
         "css": {
@@ -56,12 +56,12 @@
       "name": "@angular/common",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/common",
+      "id": "profile:@angular/common",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "705.6060461db3546c61.js"
+            "705.31092d4ebf732912.js"
           ]
         },
         "css": {
@@ -79,12 +79,12 @@
       "name": "@angular/core/primitives/di",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/core/primitives/di",
+      "id": "profile:@angular/core/primitives/di",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "common.cece6035bdf90ed5.js"
+            "common.8fd26091dcc65234.js"
           ]
         },
         "css": {
@@ -102,12 +102,12 @@
       "name": "@angular/core/primitives/signals",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/core/primitives/signals",
+      "id": "profile:@angular/core/primitives/signals",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "common.cece6035bdf90ed5.js"
+            "common.8fd26091dcc65234.js"
           ]
         },
         "css": {
@@ -125,12 +125,12 @@
       "name": "@angular/core",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/core",
+      "id": "profile:@angular/core",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "295.680975b609ddd665.js"
+            "295.099627c39ede5fbe.js"
           ]
         },
         "css": {
@@ -148,12 +148,12 @@
       "name": "@angular/platform-browser",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/platform-browser",
+      "id": "profile:@angular/platform-browser",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "567.be39226eb0ec32d9.js"
+            "567.09a8b203cf7c6a24.js"
           ]
         },
         "css": {
@@ -171,57 +171,12 @@
       "name": "@angular/router",
       "version": "20.3.5",
       "eager": false,
-      "id": "cart:@angular/router",
+      "id": "profile:@angular/router",
       "assets": {
         "js": {
           "async": [],
           "sync": [
-            "451.e3ca363e69cc35c3.js"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": []
-        }
-      },
-      "usedIn": []
-    },
-    {
-      "singleton": true,
-      "requiredVersion": "0.0.1",
-      "shareScope": "default",
-      "eager": false,
-      "name": "@nxmfe/shared/services",
-      "version": "0.0.1",
-      "id": "cart:@nxmfe/shared/services",
-      "assets": {
-        "js": {
-          "async": [],
-          "sync": [
-            "common.cece6035bdf90ed5.js"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": []
-        }
-      },
-      "usedIn": []
-    },
-    {
-      "singleton": true,
-      "requiredVersion": "^2.3.0",
-      "shareScope": "default",
-      "strictVersion": true,
-      "name": "tslib",
-      "version": "2.8.1",
-      "eager": false,
-      "id": "cart:tslib",
-      "assets": {
-        "js": {
-          "async": [],
-          "sync": [
-            "635.d3f966c3a62519c7.js"
+            "451.b21af96aee15aae2.js"
           ]
         },
         "css": {
@@ -236,10 +191,10 @@
   "exposes": [
     {
       "path": "./Routes",
-      "id": "cart:Routes",
+      "id": "profile:Routes",
       "name": "Routes",
       "requires": [],
-      "file": "apps/cart/src/app/remote-entry/entry.routes.ts",
+      "file": "profile/src/app/remote-entry/entry.routes.ts",
       "assets": {
         "js": {
           "sync": [],

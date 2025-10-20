@@ -894,6 +894,44 @@ const createModuleFederationConfig = options => {
 
 /***/ }),
 
+/***/ 1217:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+var moduleMap = {
+	"./Routes": () => {
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(211), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(1968)))));
+	}
+};
+var get = (module, getScope) => {
+	__webpack_require__.R = getScope;
+	getScope = (
+		__webpack_require__.o(moduleMap, module)
+			? moduleMap[module]()
+			: Promise.resolve().then(() => {
+				throw new Error('Module "' + module + '" does not exist in container.');
+			})
+	);
+	__webpack_require__.R = undefined;
+	return getScope;
+};
+var init = (shareScope, initScope, remoteEntryInitOptions) => {
+	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
+		shareScope: shareScope,
+		initScope: initScope,
+		remoteEntryInitOptions: remoteEntryInitOptions,
+		shareScopeKey: "default"
+	})
+};
+
+
+// This exports getters to disallow modifications
+__webpack_require__.d(exports, {
+	get: () => (get),
+	init: () => (init)
+});
+
+/***/ }),
+
 /***/ 4523:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -929,7 +967,7 @@ function _asyncToGenerator(n) {
 
 /***/ }),
 
-/***/ 5609:
+/***/ 4846:
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
 
@@ -2011,7 +2049,7 @@ function getTargetSharedOptions(options) {
 }
 function getBuilderId() {
   //@ts-ignore
-  return  true ? "cart:0.0.0" : 0;
+  return  true ? "profile:0.0.0" : 0;
 }
 
 // Function to match a remote with its name and expose
@@ -4409,7 +4447,7 @@ var index = /*#__PURE__*/Object.freeze({
 // injected by bundler, so it can not use runtime-core stuff
 function utils_esm_getBuilderId() {
   //@ts-ignore
-  return  true ? "cart:0.0.0" : 0;
+  return  true ? "profile:0.0.0" : 0;
 }
 function getGlobalFederationInstance(name, version) {
   const buildId = utils_esm_getBuilderId();
@@ -4936,7 +4974,7 @@ const federation = {
 };
 
 //# sourceMappingURL=index.esm.js.map
-;// ./node_modules/.federation/entry.f23a93b99e5eeb8211b556b6fa90603e.js
+;// ./node_modules/.federation/entry.f5a7c64f0e0a795ee4ded940744b0ff9.js
 
 if (!__webpack_require__.federation.runtime) {
   var prevFederation = __webpack_require__.federation;
@@ -4960,44 +4998,6 @@ if (!__webpack_require__.federation.instance) {
     __webpack_require__.federation.prefetch();
   }
 }
-
-/***/ }),
-
-/***/ 6454:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-var moduleMap = {
-	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(708), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4538)))));
-	}
-};
-var get = (module, getScope) => {
-	__webpack_require__.R = getScope;
-	getScope = (
-		__webpack_require__.o(moduleMap, module)
-			? moduleMap[module]()
-			: Promise.resolve().then(() => {
-				throw new Error('Module "' + module + '" does not exist in container.');
-			})
-	);
-	__webpack_require__.R = undefined;
-	return getScope;
-};
-var init = (shareScope, initScope, remoteEntryInitOptions) => {
-	return __webpack_require__.federation.bundlerRuntime.initContainerEntry({	webpackRequire: __webpack_require__,
-		shareScope: shareScope,
-		initScope: initScope,
-		remoteEntryInitOptions: remoteEntryInitOptions,
-		shareScopeKey: "default"
-	})
-};
-
-
-// This exports getters to disallow modifications
-__webpack_require__.d(exports, {
-	get: () => (get),
-	init: () => (init)
-});
 
 /***/ }),
 
@@ -5067,7 +5067,7 @@ function _extends() {
 /******/ (() => {
 /******/ 	if(!__webpack_require__.federation){
 /******/ 		__webpack_require__.federation = {
-/******/ 			initOptions: {"name":"cart","remotes":[],"shareStrategy":"version-first"},
+/******/ 			initOptions: {"name":"profile","remotes":[],"shareStrategy":"version-first"},
 /******/ 			chunkMatcher: function(chunkId) {return !/^(361|971|98)$/.test(chunkId)},
 /******/ 			rootOutputDir: "",
 /******/ 			initialConsumes: undefined,
@@ -5118,7 +5118,7 @@ function _extends() {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"cece6035bdf90ed5","111":"4d272399c83a3d80","203":"8f6c71c1aa58de28","295":"680975b609ddd665","440":"efbf612dd108d396","451":"e3ca363e69cc35c3","567":"be39226eb0ec32d9","635":"d3f966c3a62519c7","705":"6060461db3546c61","708":"b6d7a10412c7b101"}[chunkId] + ".js";
+/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"8fd26091dcc65234","111":"4388b13071766e6f","203":"1790b9bc1c2104a6","211":"43527cc114c455cb","295":"099627c39ede5fbe","440":"98be09ac3ca7c3aa","451":"b21af96aee15aae2","567":"09a8b203cf7c6a24","705":"31092d4ebf732912"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -5139,7 +5139,7 @@ function _extends() {
 /******/ /* webpack/runtime/load script */
 /******/ (() => {
 /******/ 	var inProgress = {};
-/******/ 	var dataWebpackPrefix = "cart:";
+/******/ 	var dataWebpackPrefix = "profile:";
 /******/ 	// loadScript function to load a script via script tag
 /******/ 	__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 		if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -5214,7 +5214,7 @@ function _extends() {
 /******/ 		var warn = (msg) => {
 /******/ 			if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 		};
-/******/ 		var uniqueName = "cart";
+/******/ 		var uniqueName = "profile";
 /******/ 		var register = (name, version, factory, eager) => {
 /******/ 			var versions = scope[name] = scope[name] || {};
 /******/ 			var activeVersion = versions[version];
@@ -5241,8 +5241,6 @@ function _extends() {
 /******/ 				register("@angular/core", "20.3.5", () => (Promise.all([__webpack_require__.e(440), __webpack_require__.e(76), __webpack_require__.e(295)]).then(() => (() => (__webpack_require__(295))))));
 /******/ 				register("@angular/platform-browser", "20.3.5", () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(567)]).then(() => (() => (__webpack_require__(6567))))));
 /******/ 				register("@angular/router", "20.3.5", () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(203), __webpack_require__.e(361), __webpack_require__.e(451), __webpack_require__.e(98)]).then(() => (() => (__webpack_require__(6451))))));
-/******/ 				register("@nxmfe/shared/services", "0.0.1", () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(76)]).then(() => (() => (__webpack_require__(8524))))));
-/******/ 				register("tslib", "2.8.1", () => (__webpack_require__.e(635).then(() => (() => (__webpack_require__(1635))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -5296,13 +5294,7 @@ function _extends() {
 /******/ 			shareConfig: {"eager":false,"requiredVersion":"~20.3.0","strictVersion":true,"singleton":true,"layer":null}},],	"@angular/router": [{	version: "20.3.5",
 /******/ 			get: () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(203), __webpack_require__.e(361), __webpack_require__.e(451), __webpack_require__.e(98)]).then(() => (() => (__webpack_require__(6451))))),
 /******/ 			scope: ["default"],
-/******/ 			shareConfig: {"eager":false,"requiredVersion":"~20.3.0","strictVersion":true,"singleton":true,"layer":null}},],	"@nxmfe/shared/services": [{	version: "0.0.1",
-/******/ 			get: () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(76)]).then(() => (() => (__webpack_require__(8524))))),
-/******/ 			scope: ["default"],
-/******/ 			shareConfig: {"eager":false,"requiredVersion":"0.0.1","singleton":true,"layer":null}},],	"tslib": [{	version: "2.8.1",
-/******/ 			get: () => (__webpack_require__.e(635).then(() => (() => (__webpack_require__(1635))))),
-/******/ 			scope: ["default"],
-/******/ 			shareConfig: {"eager":false,"requiredVersion":"^2.3.0","strictVersion":true,"singleton":true,"layer":null}},],}
+/******/ 			shareConfig: {"eager":false,"requiredVersion":"~20.3.0","strictVersion":true,"singleton":true,"layer":null}},],}
 /******/ 	__webpack_require__.S = {};
 /******/ 	var initPromises = {};
 /******/ 	var initTokens = {};
@@ -5358,34 +5350,6 @@ function _extends() {
 /******/ 				scope: ["default"],
 /******/ 			},
 /******/ 			shareKey: "@angular/common",
-/******/ 		},
-/******/ 		1061: {
-/******/ 			getter: () => (__webpack_require__.e(76).then(() => (() => (__webpack_require__(8524))))),
-/******/ 			shareInfo: {
-/******/ 				shareConfig: {
-/******/ 				  "fixedDependencies": false,
-/******/ 				  "requiredVersion": "0.0.1",
-/******/ 				  "strictVersion": false,
-/******/ 				  "singleton": true,
-/******/ 				  "eager": false
-/******/ 				},
-/******/ 				scope: ["default"],
-/******/ 			},
-/******/ 			shareKey: "@nxmfe/shared/services",
-/******/ 		},
-/******/ 		2882: {
-/******/ 			getter: () => (__webpack_require__.e(635).then(() => (() => (__webpack_require__(1635))))),
-/******/ 			shareInfo: {
-/******/ 				shareConfig: {
-/******/ 				  "fixedDependencies": false,
-/******/ 				  "requiredVersion": "^2.3.0",
-/******/ 				  "strictVersion": true,
-/******/ 				  "singleton": true,
-/******/ 				  "eager": false
-/******/ 				},
-/******/ 				scope: ["default"],
-/******/ 			},
-/******/ 			shareKey: "tslib",
 /******/ 		},
 /******/ 		395: {
 /******/ 			getter: () => (__webpack_require__.e(76).then(() => (() => (__webpack_require__(2056))))),
@@ -5449,9 +5413,6 @@ function _extends() {
 /******/ 		"98": [
 /******/ 			5098
 /******/ 		],
-/******/ 		"203": [
-/******/ 			2882
-/******/ 		],
 /******/ 		"295": [
 /******/ 			395,
 /******/ 			5535
@@ -5461,9 +5422,6 @@ function _extends() {
 /******/ 		],
 /******/ 		"567": [
 /******/ 			2943
-/******/ 		],
-/******/ 		"708": [
-/******/ 			1061
 /******/ 		],
 /******/ 		"971": [
 /******/ 			9971
@@ -5488,7 +5446,7 @@ function _extends() {
 /******/ 	__webpack_require__.x = () => {
 /******/ 		if (!hasRun) {
 /******/ 		  hasRun = true;
-/******/ 		  __webpack_require__(5609);
+/******/ 		  __webpack_require__(4846);
 /******/ 		}
 /******/ 		if (typeof prevStartup === 'function') {
 /******/ 		  return prevStartup();
@@ -5506,7 +5464,7 @@ function _extends() {
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		949: 0
+/******/ 		138: 0
 /******/ 	};
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
@@ -5583,7 +5541,7 @@ function _extends() {
 /******/ 	
 /******/ 	}
 /******/ 	
-/******/ 	var chunkLoadingGlobal = self["webpackChunkcart"] = self["webpackChunkcart"] || [];
+/******/ 	var chunkLoadingGlobal = self["webpackChunkprofile"] = self["webpackChunkprofile"] || [];
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ })();
@@ -5594,7 +5552,7 @@ function _extends() {
 /******/ // module cache are used so entry inlining is disabled
 /******/ // startup
 /******/ // Load entry module and return exports
-/******/ var __webpack_exports__ = __webpack_require__(6454);
+/******/ var __webpack_exports__ = __webpack_require__(1217);
 /******/ const __webpack_exports__get = __webpack_exports__.get;
 /******/ const __webpack_exports__init = __webpack_exports__.init;
 /******/ export { __webpack_exports__get as get, __webpack_exports__init as init };

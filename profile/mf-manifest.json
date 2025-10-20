@@ -1,8 +1,8 @@
 {
-  "id": "products",
-  "name": "products",
+  "id": "profile",
+  "name": "profile",
   "metaData": {
-    "name": "products",
+    "name": "profile",
     "type": "app",
     "buildInfo": {
       "buildVersion": "0.0.0",
@@ -19,14 +19,14 @@
       "zip": "",
       "api": ""
     },
-    "globalName": "products",
+    "globalName": "profile",
     "pluginVersion": "0.18.4",
     "prefetchInterface": false,
     "publicPath": "auto"
   },
   "shared": [
     {
-      "id": "products:@angular/common/http",
+      "id": "profile:@angular/common/http",
       "name": "@angular/common/http",
       "version": "20.3.5",
       "singleton": true,
@@ -35,7 +35,7 @@
         "js": {
           "async": [],
           "sync": [
-            "111.6dcd56f3b6fbe424.js"
+            "111.4388b13071766e6f.js"
           ]
         },
         "css": {
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "products:@angular/common",
+      "id": "profile:@angular/common",
       "name": "@angular/common",
       "version": "20.3.5",
       "singleton": true,
@@ -54,7 +54,7 @@
         "js": {
           "async": [],
           "sync": [
-            "705.d2f7dca15efd5259.js"
+            "705.31092d4ebf732912.js"
           ]
         },
         "css": {
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "products:@angular/core/primitives/di",
+      "id": "profile:@angular/core/primitives/di",
       "name": "@angular/core/primitives/di",
       "version": "20.3.5",
       "singleton": true,
@@ -73,7 +73,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.5fcb5f14226380be.js"
+            "common.8fd26091dcc65234.js"
           ]
         },
         "css": {
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "products:@angular/core/primitives/signals",
+      "id": "profile:@angular/core/primitives/signals",
       "name": "@angular/core/primitives/signals",
       "version": "20.3.5",
       "singleton": true,
@@ -92,7 +92,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.5fcb5f14226380be.js"
+            "common.8fd26091dcc65234.js"
           ]
         },
         "css": {
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "products:@angular/core",
+      "id": "profile:@angular/core",
       "name": "@angular/core",
       "version": "20.3.5",
       "singleton": true,
@@ -111,7 +111,7 @@
         "js": {
           "async": [],
           "sync": [
-            "295.97291942ce703e07.js"
+            "295.099627c39ede5fbe.js"
           ]
         },
         "css": {
@@ -121,7 +121,7 @@
       }
     },
     {
-      "id": "products:@angular/platform-browser",
+      "id": "profile:@angular/platform-browser",
       "name": "@angular/platform-browser",
       "version": "20.3.5",
       "singleton": true,
@@ -130,7 +130,7 @@
         "js": {
           "async": [],
           "sync": [
-            "567.35262fc2beba30b8.js"
+            "567.09a8b203cf7c6a24.js"
           ]
         },
         "css": {
@@ -140,7 +140,7 @@
       }
     },
     {
-      "id": "products:@angular/router",
+      "id": "profile:@angular/router",
       "name": "@angular/router",
       "version": "20.3.5",
       "singleton": true,
@@ -149,45 +149,7 @@
         "js": {
           "async": [],
           "sync": [
-            "451.b20f78b0ddeb67b5.js"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": []
-        }
-      }
-    },
-    {
-      "id": "products:@nxmfe/shared/services",
-      "name": "@nxmfe/shared/services",
-      "version": "0.0.1",
-      "singleton": true,
-      "requiredVersion": "0.0.1",
-      "assets": {
-        "js": {
-          "async": [],
-          "sync": [
-            "common.5fcb5f14226380be.js"
-          ]
-        },
-        "css": {
-          "async": [],
-          "sync": []
-        }
-      }
-    },
-    {
-      "id": "products:tslib",
-      "name": "tslib",
-      "version": "2.8.1",
-      "singleton": true,
-      "requiredVersion": "^2.3.0",
-      "assets": {
-        "js": {
-          "async": [],
-          "sync": [
-            "635.78fb73fcff5023b8.js"
+            "451.b21af96aee15aae2.js"
           ]
         },
         "css": {
@@ -200,7 +162,7 @@
   "remotes": [],
   "exposes": [
     {
-      "id": "products:Routes",
+      "id": "profile:Routes",
       "name": "Routes",
       "assets": {
         "js": {

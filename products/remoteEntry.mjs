@@ -899,7 +899,7 @@ const createModuleFederationConfig = options => {
 
 var moduleMap = {
 	"./Routes": () => {
-		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(287), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4004)))));
+		return Promise.all(/* __federation_expose_Routes */[__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(61), __webpack_require__.e(76)]).then(() => (() => ((__webpack_require__(4004)))));
 	}
 };
 var get = (module, getScope) => {
@@ -5068,7 +5068,7 @@ function _extends() {
 /******/ 	if(!__webpack_require__.federation){
 /******/ 		__webpack_require__.federation = {
 /******/ 			initOptions: {"name":"products","remotes":[],"shareStrategy":"version-first"},
-/******/ 			chunkMatcher: function(chunkId) {return !/^(361|971|98)$/.test(chunkId)},
+/******/ 			chunkMatcher: function(chunkId) {return !/^((36|6|97)1|98)$/.test(chunkId)},
 /******/ 			rootOutputDir: "",
 /******/ 			initialConsumes: undefined,
 /******/ 			bundlerRuntimeOptions: {}
@@ -5118,7 +5118,7 @@ function _extends() {
 /******/ 	// This function allow to reference async chunks
 /******/ 	__webpack_require__.u = (chunkId) => {
 /******/ 		// return url for filenames based on template
-/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"41e515b14861b17f","111":"6dcd56f3b6fbe424","203":"c1987e78d4685a7b","287":"460d9fdec730c5aa","295":"97291942ce703e07","440":"36ed8ae508296c1f","451":"b20f78b0ddeb67b5","567":"35262fc2beba30b8","705":"d2f7dca15efd5259"}[chunkId] + ".js";
+/******/ 		return "" + (chunkId === 76 ? "common" : chunkId) + "." + {"76":"5fcb5f14226380be","111":"6dcd56f3b6fbe424","203":"7c726fab9632ba56","295":"97291942ce703e07","440":"36ed8ae508296c1f","451":"b20f78b0ddeb67b5","567":"35262fc2beba30b8","635":"78fb73fcff5023b8","705":"d2f7dca15efd5259"}[chunkId] + ".js";
 /******/ 	};
 /******/ })();
 /******/ 
@@ -5193,6 +5193,11 @@ function _extends() {
 /******/ 	};
 /******/ })();
 /******/ 
+/******/ /* webpack/runtime/runtimeId */
+/******/ (() => {
+/******/ 	__webpack_require__.j = 983;
+/******/ })();
+/******/ 
 /******/ /* webpack/runtime/sharing */
 /******/ (() => {
 /******/ 	__webpack_require__.S = {};
@@ -5241,6 +5246,8 @@ function _extends() {
 /******/ 				register("@angular/core", "20.3.5", () => (Promise.all([__webpack_require__.e(440), __webpack_require__.e(76), __webpack_require__.e(295)]).then(() => (() => (__webpack_require__(295))))));
 /******/ 				register("@angular/platform-browser", "20.3.5", () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(361), __webpack_require__.e(567)]).then(() => (() => (__webpack_require__(6567))))));
 /******/ 				register("@angular/router", "20.3.5", () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(203), __webpack_require__.e(361), __webpack_require__.e(451), __webpack_require__.e(98)]).then(() => (() => (__webpack_require__(6451))))));
+/******/ 				register("@nxmfe/shared/services", "0.0.1", () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(76)]).then(() => (() => (__webpack_require__(8524))))));
+/******/ 				register("tslib", "2.8.1", () => (__webpack_require__.e(635).then(() => (() => (__webpack_require__(1635))))));
 /******/ 			}
 /******/ 			break;
 /******/ 		}
@@ -5294,7 +5301,13 @@ function _extends() {
 /******/ 			shareConfig: {"eager":false,"requiredVersion":"~20.3.0","strictVersion":true,"singleton":true,"layer":null}},],	"@angular/router": [{	version: "20.3.5",
 /******/ 			get: () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(203), __webpack_require__.e(361), __webpack_require__.e(451), __webpack_require__.e(98)]).then(() => (() => (__webpack_require__(6451))))),
 /******/ 			scope: ["default"],
-/******/ 			shareConfig: {"eager":false,"requiredVersion":"~20.3.0","strictVersion":true,"singleton":true,"layer":null}},],}
+/******/ 			shareConfig: {"eager":false,"requiredVersion":"~20.3.0","strictVersion":true,"singleton":true,"layer":null}},],	"@nxmfe/shared/services": [{	version: "0.0.1",
+/******/ 			get: () => (Promise.all([__webpack_require__.e(971), __webpack_require__.e(76)]).then(() => (() => (__webpack_require__(8524))))),
+/******/ 			scope: ["default"],
+/******/ 			shareConfig: {"eager":false,"requiredVersion":"0.0.1","singleton":true,"layer":null}},],	"tslib": [{	version: "2.8.1",
+/******/ 			get: () => (__webpack_require__.e(635).then(() => (() => (__webpack_require__(1635))))),
+/******/ 			scope: ["default"],
+/******/ 			shareConfig: {"eager":false,"requiredVersion":"^2.3.0","strictVersion":true,"singleton":true,"layer":null}},],}
 /******/ 	__webpack_require__.S = {};
 /******/ 	var initPromises = {};
 /******/ 	var initTokens = {};
@@ -5350,6 +5363,34 @@ function _extends() {
 /******/ 				scope: ["default"],
 /******/ 			},
 /******/ 			shareKey: "@angular/common",
+/******/ 		},
+/******/ 		1061: {
+/******/ 			getter: () => (__webpack_require__.e(76).then(() => (() => (__webpack_require__(8524))))),
+/******/ 			shareInfo: {
+/******/ 				shareConfig: {
+/******/ 				  "fixedDependencies": false,
+/******/ 				  "requiredVersion": "0.0.1",
+/******/ 				  "strictVersion": false,
+/******/ 				  "singleton": true,
+/******/ 				  "eager": false
+/******/ 				},
+/******/ 				scope: ["default"],
+/******/ 			},
+/******/ 			shareKey: "@nxmfe/shared/services",
+/******/ 		},
+/******/ 		2882: {
+/******/ 			getter: () => (__webpack_require__.e(635).then(() => (() => (__webpack_require__(1635))))),
+/******/ 			shareInfo: {
+/******/ 				shareConfig: {
+/******/ 				  "fixedDependencies": false,
+/******/ 				  "requiredVersion": "^2.3.0",
+/******/ 				  "strictVersion": true,
+/******/ 				  "singleton": true,
+/******/ 				  "eager": false
+/******/ 				},
+/******/ 				scope: ["default"],
+/******/ 			},
+/******/ 			shareKey: "tslib",
 /******/ 		},
 /******/ 		395: {
 /******/ 			getter: () => (__webpack_require__.e(76).then(() => (() => (__webpack_require__(2056))))),
@@ -5410,8 +5451,14 @@ function _extends() {
 /******/ 	};
 /******/ 	// no consumes in initial chunks
 /******/ 	var chunkMapping = {
+/******/ 		"61": [
+/******/ 			1061
+/******/ 		],
 /******/ 		"98": [
 /******/ 			5098
+/******/ 		],
+/******/ 		"203": [
+/******/ 			2882
 /******/ 		],
 /******/ 		"295": [
 /******/ 			395,
@@ -5476,7 +5523,7 @@ function _extends() {
 /******/ 				if(installedChunkData) {
 /******/ 					promises.push(installedChunkData[2]);
 /******/ 				} else {
-/******/ 					if(!/^(361|971|98)$/.test(chunkId)) {
+/******/ 					if(!/^((36|6|97)1|98)$/.test(chunkId)) {
 /******/ 						// setup Promise in chunk cache
 /******/ 						var promise = new Promise((resolve, reject) => (installedChunkData = installedChunks[chunkId] = [resolve, reject]));
 /******/ 						promises.push(installedChunkData[2] = promise);

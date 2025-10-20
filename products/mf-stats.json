@@ -84,7 +84,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.41e515b14861b17f.js"
+            "common.5fcb5f14226380be.js"
           ]
         },
         "css": {
@@ -107,7 +107,7 @@
         "js": {
           "async": [],
           "sync": [
-            "common.41e515b14861b17f.js"
+            "common.5fcb5f14226380be.js"
           ]
         },
         "css": {
@@ -177,6 +177,51 @@
           "async": [],
           "sync": [
             "451.b20f78b0ddeb67b5.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "0.0.1",
+      "shareScope": "default",
+      "eager": false,
+      "name": "@nxmfe/shared/services",
+      "version": "0.0.1",
+      "id": "products:@nxmfe/shared/services",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "common.5fcb5f14226380be.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      },
+      "usedIn": []
+    },
+    {
+      "singleton": true,
+      "requiredVersion": "^2.3.0",
+      "shareScope": "default",
+      "strictVersion": true,
+      "name": "tslib",
+      "version": "2.8.1",
+      "eager": false,
+      "id": "products:tslib",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "635.78fb73fcff5023b8.js"
           ]
         },
         "css": {
