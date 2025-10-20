@@ -42,6 +42,8 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfedemos/messages/",
+          "deployUrl": "/mfedemos/messages/",
           "customWebpackConfig": {
             "path": "apps/messages/webpack.prod.config.ts"
           }

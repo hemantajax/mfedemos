@@ -42,6 +42,8 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfedemos/notifications/",
+          "deployUrl": "/mfedemos/notifications/",
           "customWebpackConfig": {
             "path": "apps/notifications/webpack.prod.config.ts"
           }

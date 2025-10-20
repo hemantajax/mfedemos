@@ -41,6 +41,8 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfedemos/",
+          "deployUrl": "/mfedemos/",
           "customWebpackConfig": {
             "path": "apps/mfeui/webpack.prod.config.ts"
           }

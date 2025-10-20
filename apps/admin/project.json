@@ -42,6 +42,8 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfedemos/admin/",
+          "deployUrl": "/mfedemos/admin/",
           "customWebpackConfig": {
             "path": "apps/admin/webpack.prod.config.ts"
           }

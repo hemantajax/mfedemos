@@ -35,7 +35,7 @@ remotes.forEach((remote, index) => {
     `\n[${index + 1}/${remotes.length}] 📦 Building ${remote} remote...`
   );
   execSync(
-    `npx nx build ${remote} --configuration=production --skip-nx-cache --baseHref=${BASE_HREF}${remote}/ --deployUrl=${BASE_HREF}${remote}/`,
+    `npx nx build ${remote} --configuration=production --skip-nx-cache`,
     { stdio: 'inherit' }
   );
 });
@@ -46,10 +46,9 @@ console.log(
     remotes.length + 1
   }] 📦 Building Host application (mfeui)...`
 );
-execSync(
-  `npx nx build mfeui --configuration=production --skip-nx-cache --baseHref=${BASE_HREF} --deployUrl=${BASE_HREF}`,
-  { stdio: 'inherit' }
-);
+execSync(`npx nx build mfeui --configuration=production --skip-nx-cache`, {
+  stdio: 'inherit',
+});
 
 // Fix module federation manifest to use GitHub Pages URLs
 console.log('\n🔧 Fixing module federation manifests...');

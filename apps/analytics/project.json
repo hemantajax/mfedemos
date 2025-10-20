@@ -42,6 +42,8 @@
             }
           ],
           "outputHashing": "all",
+          "baseHref": "/mfedemos/analytics/",
+          "deployUrl": "/mfedemos/analytics/",
           "customWebpackConfig": {
             "path": "apps/analytics/webpack.prod.config.ts"
           }
