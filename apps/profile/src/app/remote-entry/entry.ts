@@ -26,10 +26,15 @@ import { CommonModule } from '@angular/common';
                 class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
                 style="width: 120px; height: 120px"
               >
-                <i class="bi bi-person-fill" style="font-size: 4rem"></i>
+                <img
+                  src="https://ui-avatars.com/api/?name=Hemant+Kumar+Singh&background=0D6EFD&color=fff"
+                  alt="Hemant Kumar Singh"
+                  class="rounded-circle"
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                />
               </div>
-              <h4 class="mb-1">John Doe</h4>
-              <p class="text-muted mb-3">john.doe@example.com</p>
+              <h4 class="mb-1">Hemant Kumar Singh</h4>
+              <p class="text-muted mb-3">hemant.ajax@gmail.com</p>
               <div class="d-flex gap-2 justify-content-center mb-3">
                 <span class="badge bg-success-subtle text-success">
                   <i class="bi bi-check-circle me-1"></i>Verified
@@ -62,7 +67,7 @@ import { CommonModule } from '@angular/common';
                   <input
                     type="text"
                     class="form-control"
-                    value="John"
+                    value="Hemant"
                     readonly
                   />
                 </div>
@@ -71,7 +76,7 @@ import { CommonModule } from '@angular/common';
                   <input
                     type="text"
                     class="form-control"
-                    value="Doe"
+                    value="Singh"
                     readonly
                   />
                 </div>
@@ -82,7 +87,7 @@ import { CommonModule } from '@angular/common';
                   <input
                     type="email"
                     class="form-control"
-                    value="john.doe@example.com"
+                    value="hemant.ajax@gmail.com"
                     readonly
                   />
                 </div>
@@ -93,7 +98,7 @@ import { CommonModule } from '@angular/common';
                   <input
                     type="tel"
                     class="form-control"
-                    value="+1 (555) 123-4567"
+                    value="+91 7799111008"
                     readonly
                   />
                 </div>
@@ -104,7 +109,7 @@ import { CommonModule } from '@angular/common';
                   <input
                     type="date"
                     class="form-control"
-                    value="1990-01-15"
+                    value="17/09/1990"
                     readonly
                   />
                 </div>
@@ -113,7 +118,7 @@ import { CommonModule } from '@angular/common';
                   <input
                     type="text"
                     class="form-control"
-                    value="New York, USA"
+                    value="Hyderabad, India"
                     readonly
                   />
                 </div>
