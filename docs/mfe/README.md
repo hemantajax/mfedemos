@@ -1,77 +1,101 @@
 # Micro Frontend (MFE) Documentation
 
-This directory contains comprehensive guides for setting up and working with Micro Frontend architecture using Angular, Nx, and Module Federation.
+This directory contains comprehensive guides for setting up and working with Micro Frontend architecture using Angular, Nx, and Module Federation in a **polyrepo/standalone** setup.
 
-## 📚 Available Guides
-
-### ⚡ Quick Reference
-
-- **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** - Quick reference card with commands, patterns, and snippets
-  - Common commands
-  - Configuration templates
-  - Component patterns
-  - Troubleshooting quick fixes
+## 📚 Core Guides
 
 ### 🏠 Host/Shell Application
 
-- **[HOST_SHELL_MFE_SETUP.md](./HOST_SHELL_MFE_SETUP.md)** - Complete guide for setting up a standalone shell/host application
-  - Initial setup and dependencies
-  - Project structure
-  - Module Federation configuration
-  - Development workflow
-  - Production deployment
-  - Best practices and troubleshooting
+**[HOST_SHELL_MFE_SETUP.md](./HOST_SHELL_MFE_SETUP.md)** - Complete guide for setting up a standalone shell/host application
 
-### 🎨 Polyrepo UIKit Approach
+- Initial setup and dependencies
+- Project structure and configuration
+- Module Federation setup (dev & production)
+- Development workflow
+- Production deployment options
+- Best practices and troubleshooting
 
-- **[POLYREPO_UIKIT_APPROACH.md](./POLYREPO_UIKIT_APPROACH.md)** - Recommended approach for sharing UI components
-  - Single package strategy
-  - Publishing to npm
-  - Version management
-  - Dependency management
+### 📦 Remote MFE Application
 
-### 📖 General MFE Documentation
+**[REMOTE_MFE_SETUP.md](./REMOTE_MFE_SETUP.md)** - Complete guide for creating a standalone remote micro-frontend
 
-- **[mfe.md](./mfe.md)** - Module Federation architecture overview and concepts
+- Initial setup with Nx
+- Module Federation configuration
+- Remote entry routes
+- Integration with UIKit
+- Development and deployment
+- Best practices and troubleshooting
 
-### 📚 Library Types
+### 🎨 Shared UIKit Package
 
-- **[NX_LIBRARY_TYPES.md](./NX_LIBRARY_TYPES.md)** - Understanding Nx library types
-  - Publishable libraries
-  - Non-publishable libraries
-  - When to use each type
+**[POLYREPO_UIKIT_APPROACH.md](./POLYREPO_UIKIT_APPROACH.md)** - Recommended approach for sharing UI components
 
-## 🚀 Getting Started Workflow
+- Single package strategy
+- Publishing to npm/GitHub Packages
+- Version management
+- Consuming in remote MFEs
 
-### For Standalone Repositories
+## 📖 Additional Resources
 
-1. **Create Shell/Host Application** (5 minutes)
+### ⚡ Quick Reference
 
-   ```bash
-   # Create workspace
-   mkdir mfe-host && cd mfe-host
-   npx create-nx-workspace@latest .    # Interactive: choose angular-monorepo
+**[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)** - Quick reference card with common commands and patterns
 
-   # Add Module Federation
-   nx g @nx/angular:setup-mf shell --mfType=host
-   ```
+- Quick start commands
+- Configuration templates
+- Component patterns
+- Troubleshooting quick fixes
 
-   - Follow [HOST_SHELL_MFE_SETUP.md](./HOST_SHELL_MFE_SETUP.md) for complete guide
-   - Set up in its own GitHub repository
-   - Deploy to your hosting platform
+### 📚 Nx Library Types
 
-2. **Create Shared UIKit Package** _(Coming Soon)_
+**[NX_LIBRARY_TYPES.md](./NX_LIBRARY_TYPES.md)** - Understanding Nx library types
 
-   - Will document remote MFE setup
-   - Follow the UIKit approach from [POLYREPO_UIKIT_APPROACH.md](./POLYREPO_UIKIT_APPROACH.md)
-   - Publish to npm or private registry
-   - Version and distribute
+- Publishable vs non-publishable libraries
+- Buildable libraries
+- When to use each type
+- UIKit meta-package approach
 
-3. **Create Remote MFEs** _(Documentation Coming Soon)_
+## 🚀 Getting Started
+
+### Recommended Setup Order
+
+1. **Create Shell/Host Application** (30-60 minutes)
+
+   - Follow [HOST_SHELL_MFE_SETUP.md](./HOST_SHELL_MFE_SETUP.md)
+   - Set up standalone GitHub repository
+   - Configure Module Federation
+   - Deploy to hosting platform
+
+2. **Create Shared UIKit Package** (1-2 hours)
+
+   - Follow [POLYREPO_UIKIT_APPROACH.md](./POLYREPO_UIKIT_APPROACH.md)
+   - Publish to npm or GitHub Packages
+   - Version and manage dependencies
+
+3. **Create Remote MFEs** (30-60 minutes each)
+   - Follow [REMOTE_MFE_SETUP.md](./REMOTE_MFE_SETUP.md)
    - Each MFE in its own repository
    - Consume shared UIKit package
-   - Configure Module Federation
    - Deploy independently
+
+### Quick Start (5 minutes)
+
+```bash
+# 1. Create workspace
+mkdir mfe-host && cd mfe-host
+npx create-nx-workspace@latest .
+
+# When prompted, choose:
+# - Preset: angular-monorepo
+# - Application name: shell
+# - Bundler: webpack
+
+# 2. Add Module Federation
+nx g @nx/angular:setup-mf shell --mfType=host --port=4200
+
+# 3. Start development
+nx serve shell
+```
 
 ## 📂 Repository Structure Examples
 
@@ -182,14 +206,14 @@ my-company-products/
 - **Bootstrap**: v5.3+ (UI framework)
 - **RxJS**: v7.8+ (reactive programming)
 
-## 📝 Coming Soon
+## 📝 Additional Topics
 
-- **Remote MFE Setup Guide** - Complete guide for creating remote micro frontends
-- **Shared Services Guide** - Communication between MFEs
-- **Deployment Strategies** - CI/CD pipelines for MFE architecture
-- **Testing Strategies** - E2E and integration testing for MFEs
-- **Performance Optimization** - Bundle size, lazy loading, caching
-- **Security Best Practices** - Authentication, authorization, CORS
+For more advanced topics, see:
+
+- **Shared Services**: [../SHARED_SERVICES_GUIDE.md](../SHARED_SERVICES_GUIDE.md) - Cross-MFE communication
+- **Deployment**: See deployment sections in HOST and REMOTE guides
+- **Testing**: E2E testing strategies (covered in individual guides)
+- **Security**: Authentication and guards (covered in HOST guide)
 
 ## 🔗 Related Documentation
 
@@ -198,24 +222,22 @@ my-company-products/
 - [Monorepo vs Polyrepo Comparison](../MONOREPO_VS_POLYREPO.md)
 - [Shared Services Guide](../SHARED_SERVICES_GUIDE.md)
 
-## 💡 Tips
+## 💡 Key Principles
 
-1. **Start with the Shell**: Always set up your shell/host application first
-2. **Plan Your UIKit**: Design your shared component library early
-3. **Independent Deployments**: Each MFE should be deployable independently
-4. **Version Carefully**: Use semantic versioning for your UIKit package
-5. **Document Everything**: Keep your team informed about architecture decisions
+1. **Standalone Repositories**: Each MFE has its own Git repository
+2. **Independent Deployment**: Deploy MFEs separately without affecting others
+3. **Shared UIKit**: Use a single npm package for common components
+4. **Version Control**: Use semantic versioning for the UIKit package
+5. **Module Federation**: Runtime integration without monorepo coupling
 
-## 🆘 Getting Help
+## 🆘 Need Help?
 
-If you encounter issues:
-
-1. Check the troubleshooting section in each guide
-2. Review the [Module Federation documentation](https://module-federation.io/)
-3. Consult the [Nx documentation](https://nx.dev/recipes/module-federation)
-4. Check GitHub issues in the respective repositories
+- **Troubleshooting**: Check the troubleshooting sections in each guide
+- **Module Federation**: [module-federation.io](https://module-federation.io/)
+- **Nx Documentation**: [nx.dev/recipes/module-federation](https://nx.dev/recipes/module-federation)
+- **Angular**: [angular.dev](https://angular.dev/)
 
 ---
 
 **Last Updated**: October 21, 2025  
-**Maintained By**: MFE Team
+**Version**: 1.0.0
