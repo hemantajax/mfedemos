@@ -29,12 +29,25 @@ A **prominent banner** will automatically appear when ready:
 
 ## 📚 Documentation
 
+### Monorepo Documentation
+
 - **[QUICK_ACCESS.md](./docs/QUICK_ACCESS.md)** - Quick reference for starting and accessing the app
 - **[PORT_GUIDE.md](./docs/PORT_GUIDE.md)** - Port configuration explained
 - **[DEVREMOTES_GUIDE.md](./docs/DEVREMOTES_GUIDE.md)** - How to add new remote MFEs
 - **[LIBRARIES_ARCHITECTURE.md](./docs/LIBRARIES_ARCHITECTURE.md)** - Shared libraries structure
 - **[NPM_SCRIPTS_REFERENCE.md](./docs/NPM_SCRIPTS_REFERENCE.md)** - All npm commands
 - **[DOCUMENTATION_INDEX.md](./docs/DOCUMENTATION_INDEX.md)** - Complete documentation index
+
+### 🌟 Polyrepo Architecture (Alternative Approach)
+
+> Want to see how this would work with **independent repositories** instead of a monorepo? Check out the polyrepo implementation guide!
+
+- **[docs/POLYREPO_UIKIT_APPROACH.md](./docs/POLYREPO_UIKIT_APPROACH.md)** ⭐ - **RECOMMENDED**: Single package UIKit strategy
+- **[docs/NX_LIBRARY_TYPES.md](./docs/NX_LIBRARY_TYPES.md)** - Understanding Nx library types
+- **[POLYREPO_SHOWCASE_SUMMARY.md](./POLYREPO_SHOWCASE_SUMMARY.md)** - Overview and value proposition
+- **[docs/POLYREPO_IMPLEMENTATION_PLAN.md](./docs/POLYREPO_IMPLEMENTATION_PLAN.md)** - Step-by-step implementation
+- **[docs/MONOREPO_VS_POLYREPO.md](./docs/MONOREPO_VS_POLYREPO.md)** - Detailed comparison
+- **[docs/POLYREPO_README.md](./docs/POLYREPO_README.md)** - Complete polyrepo documentation index
 
 ---
 
